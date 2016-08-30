@@ -175,4 +175,5 @@ public class AutoDeLister extends AppCompatActivity implements OnClickListener,
         });
         ad.show();
     }
+
 }

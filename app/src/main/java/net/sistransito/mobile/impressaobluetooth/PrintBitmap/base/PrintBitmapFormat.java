@@ -275,7 +275,7 @@ public class PrintBitmapFormat extends BasePaint {
         setNewLine(1);//s1
         y_position = drawText(s1, x_text_start, x_position_end, y_position, paintNormal, Paint.Align.LEFT);
         setNewLine(1);
-        createQuotes(s2, false); //not possible to increase this font. I'd like increase.Ok?ok
+        createQuotes(s2, false); //not possible to increase this font. I'd like increase s2.Ok?ok
         setNewLine(1);
         drawBox(new Rect(x_position_start, y_int, x_position_end, y_position));
         System.gc();
