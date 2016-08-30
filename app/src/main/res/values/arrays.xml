@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="filter_nome_pais">
+        <item>Brasil</item>
+        <item>Argentina</item>
+        <item>Bolívia</item>
+        <item>Guiana</item>
+        <item>Chile</item>
+        <item>Venezuela</item>
+        <item>Paraguai</item>
+        <item>Uruguai</item>
+        <item>México</item>
+        <item>Estados Unidos da América</item>
+        <item>Canadá</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="autode_categoria">
+        <item>OFICIAL</item>
+        <item>PARTICULAR</item>
+        <item>DE ALUGUEL</item>
+        <item>DE APRENDIZAGEM</item>
+        <item>DE REPRESENTAÇÃO DIPLOMÁTICA</item>
+        <item>DE REPARTIÇÕES CONSULARES DE CARREIRA</item>
+        <item>DE ORGANISMOS INTERNACIONAIS ACREDITADOS JUNTO AO</item>
+        <item>GOVERNO BRASILEIRO</item>
+    </string-array>
+    <string-array name="autode_especie">
+        <item>PASSAGEIRO</item>
+        <item>CARGA</item>
+        <item>MISTO</item>
+        <item>COMPETIÇÃO</item>
+        <item>TRAÇÃO</item>
+        <item>ESPECIAL</item>
+        <item>COLEÇÃO</item>
+    </string-array>
+    <!-- rrd array -->
+    <string-array name="rrd_documento">
+        <item>CRLV</item>
+        <item>CNH</item>
+        <item>PPD</item>
+    </string-array>
+    <string-array name="qtd_de">
+        <item>"0"</item>
+        <item>"1"</item>
+        <item>"2"</item>
+        <item>"3"</item>
+        <item>"4"</item>
+        <item>"5"</item>
+        <item>"6"</item>
+        <item>"7"</item>
+        <item>"8"</item>
+        <item>"9"</item>
+        <item>"10"</item>
+        <item>"15"</item>
+        <item>"20"</item>
+        <item>"25"</item>
+        <item>"30"</item>
+    </string-array>
+    <string-array name="tca_uf_array">
+        <item>"PA"</item>
+        <item>"AC"</item>
+        <item>"AL"</item>
+        <item>"AM"</item>
+        <item>"AP"</item>
+        <item>"BA"</item>
+        <item>"CE"</item>
+        <item>"DF"</item>
+        <item>"ES"</item>
+        <item>"GO"</item>
+        <item>"MA"</item>
+        <item>"MG"</item>
+        <item>"MS"</item>
+        <item>"MT"</item>
+        <item>"PA"</item>
+        <item>"PB"</item>
+        <item>"PE"</item>
+        <item>"PI"</item>
+        <item>"PR"</item>
+        <item>"RJ"</item>
+        <item>"RN"</item>
+        <item>"RO"</item>
+        <item>"RR"</item>
+        <item>"RS"</item>
+        <item>"SC"</item>
+        <item>"SE"</item>
+        <item>"SP"</item>
+        <item>"TO"</item>
+    </string-array>
+
+    <!-- gager array -->
+    <string-array name="remocao_atraves_de">
+        <item>Agente</item>
+        <item>Condutor</item>
+        <item>Guincho</item>
+    </string-array>
+
+    <!-- filter short name -->
+
+    <string-array name="filter_short_name">
+        <item>AM</item>
+        <item>EP</item>
+        <item>NT</item>
+        <item>QB</item>
+        <item>OK</item>
+        <item>IN</item>
+        <item>RC</item>
+        <item>TR</item>
+        <item>DB</item>
+        <item>RG</item>
+        <item></item>
+    </string-array>
+    <string-array name="filter_full_name">
+        <item>Amongado</item>
+        <item>Empenado</item>
+        <item>Não tem</item>
+        <item>Quebrado</item>
+        <item>Normal</item>
+        <item>Inoperante</item>
+        <item>Riscado</item>
+        <item>Trincado</item>
+        <item>Desbotado</item>
+        <item>Rasgado</item>
+    </string-array>
+
+    <!-- Estrutura array -->
+    <string-array name="es_0">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante</item>
+        <item>Quebrado</item>
+    </string-array>
+    <string-array name="es_1">
+        <item>Normal</item>
+        <item>Amongado</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+    </string-array>
+    <string-array name="es_2">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Rasgado</item>
+        <item>Riscado</item>
+    </string-array>
+    <string-array name="es_3">
+        <item>Normal</item>
+        <item>Amongado</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+    </string-array>
+    <string-array name="es_4">
+        <item>Normal</item>
+        <item>Amongado</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+    </string-array>
+    <string-array name="es_5">
+        <item>Normal</item>
+        <item>Amongado</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+    </string-array>
+    <string-array name="es_6">
+        <item>Normal</item>
+        <item>Amongado</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+    </string-array>
+    <string-array name="es_7">
+        <item>Normal</item>
+        <item>Amongado</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+    </string-array>
+    <string-array name="es_8">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante</item>
+        <item>Quebrado</item>
+    </string-array>
+    <string-array name="es_9">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Amongado </item>
+        <item>Inoperante</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+        <item>Trincado</item>
+    </string-array>
+    <string-array name="es_10">
+        <item>Normal</item>
+        <item>Amongado</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+    </string-array>
+    <string-array name="es_11">
+        <item>Normal</item>
+        <item>Desbotado</item>
+        <item>Riscado</item>
+    </string-array>
+    <string-array name="es_12">
+        <item>Normal</item>
+        <item>Desbotado</item>
+        <item>Riscado</item>
+    </string-array>
+    <string-array name="es_13">
+        <item>Normal</item>
+        <item>Desbotado</item>
+        <item>Riscado</item>
+    </string-array>
+    <string-array name="es_14">
+        <item>Normal</item>
+        <item>Desbotado</item>
+        <item>Riscado</item>
+    </string-array>
+    <string-array name="es_15">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Amongado </item>
+        <item>Inoperante</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+        <item>Trincado</item>
+    </string-array>
+    <string-array name="es_16">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Amongado </item>
+        <item>Inoperante</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+        <item>Trincado</item>
+    </string-array>
+    <string-array name="es_17">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Amongado </item>
+        <item>Inoperante</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+        <item>Trincado</item>
+    </string-array>
+    <string-array name="es_18">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Amongado </item>
+        <item>Inoperante</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+        <item>Trincado</item>
+    </string-array>
+
+    <!-- acesseroris array -->
+
+    <string-array name="ac_0">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante</item>
+        <item>Quebrado </item>
+    </string-array>
+    <string-array name="ac_1">
+        <item>Normal</item>
+        <item>Não tem </item>
+    </string-array>
+    <string-array name="ac_2">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Rasgado</item>
+        <item>Riscado </item>
+    </string-array>
+    <string-array name="ac_3">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante </item>
+    </string-array>
+    <string-array name="ac_4">
+        <item>Normal</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+        <item>Trincado </item>
+    </string-array>
+    <string-array name="ac_5">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante </item>
+    </string-array>
+    <string-array name="ac_6">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Vencido </item>
+    </string-array>
+    <string-array name="ac_7">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante</item>
+        <item>Quebrado</item>
+    </string-array>
+    <string-array name="ac_8">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante</item>
+        <item>Quebrado</item>
+    </string-array>
+    <string-array name="ac_9">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante </item>
+    </string-array>
+    <string-array name="ac_10">
+        <item>Normal</item>
+        <item>Amongado</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+        <item>Trincado </item>
+    </string-array>
+    <string-array name="ac_11">
+        <item>Normal</item>
+        <item>Amongado</item>
+        <item>Quebrado</item>
+        <item>Riscado</item>
+        <item>Trincado </item>
+    </string-array>
+    <string-array name="ac_12">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante </item>
+    </string-array>
+    <string-array name="ac_13">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante </item>
+    </string-array>
+    <string-array name="ac_14">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante </item>
+    </string-array>
+    <string-array name="ac_15">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante </item>
+    </string-array>
+    <string-array name="ac_16">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante</item>
+        <item>Quebrado</item>
+        <item>Trincado </item>
+    </string-array>
+    <string-array name="ac_17">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante</item>
+        <item>Quebrado</item>
+        <item>Trincado </item>
+    </string-array>
+    <string-array name="ac_18">
+        <item>Normal</item>
+        <item>Parcial</item>
+        <item>Não tem </item>
+    </string-array>
+    <string-array name="ac_19">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante </item>
+    </string-array>
+    <string-array name="ac_20">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante </item>
+    </string-array>
+    <string-array name="ac_21">
+        <item>Normal</item>
+        <item>Não tem</item>
+        <item>Inoperante</item>
+        <item>Empenado</item>
+    </string-array>
+    <string-array name="overflow">
+        <item>Configurar</item>
+        <item>Ajuda</item>
+        <item>Autos restantes</item>
+        <item>Logout</item>
+    </string-array>
+
+</resources><!--
+ <string-array name="autode_descricao">
+        <item>ALTO SENSOR IV</item>
+        <item>ALCOOL LIMITED 343</item>
+        <item>BFD-60</item>
+        <item>PAQUIMETRO DIGITAL</item>
+        <item>PAQUIMETRO MANUAL</item>
+    </string-array>
+    <string-array name="autode_cpf">
+        <item>"0"</item>
+        <item>"1"</item>
+        <item>"2"</item>
+        <item>"3"</item>
+        <item>"4"</item>
+        <item>"5"</item>
+        <item>"6"</item>
+        <item>"7"</item>
+        <item>"8"</item>
+        <item>"9"</item>
+        <item>"10"</item>
+        <item>"11"</item>
+    </string-array>
+-->

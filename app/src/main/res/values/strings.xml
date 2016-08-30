@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="menu">
+        <item>Configurações</item>
+        <item>Ajuda</item>
+    </string-array>
+    <string name="invalid_inout">Invalid inout</string>
+    <string name="processing">Carregando</string>
+    <string name="login_fail">Login fail</string>
+    <string name="email_senha_invalid">Email ou senha invlidos</string>
+    <string name="information">Informaoes</string>
+    <string name="deletando">Deletando</string>
+    <string name="marcar_tudo">Checando tudo</string>
+    <string name="menu_deletar">Deletar</string>
+    <string name="nome_app">Sistrânsito Mobile</string>
+    <string name="menu_config">Configurações</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="logo">logo</string>
+    <string name="letras_da_placa">Letras da placa</string>
+    <string name="numeros_da_placa">Números da placa</string>
+    <string name="mensagem_erro_letra_placa">Insira 3 letras para a placa</string>
+    <string name="mensagem_erro_numero_placa">Insira 4 números para a placa</string>
+    <string name="digitacao_invalida">Entrada inválida</string>
+    <string name="dados_da_cnh">Insira os dados da CNH</string>
+    <string name="nome_proprietario_cnh_ppd">Nome ou CPF da CNH</string>
+
+    <!-- placa format -->
+    <string name="placa_format">Placa :&#160;</string>
+    <string name="modelo_format">Marca/Modelo :&#160;</string>
+    <string name="cor_format">Cor :&#160;</string>
+    <string name="tipo_format">Tipo :&#160;</string>
+    <string name="ano_licenciamento_format">Ano Licenciamento :&#160;</string>
+    <string name="data_licenciamento_format">Data Licenciamento :&#160;</string>
+    <string name="licenciamento_format">Licenciamento :&#160;</string>
+    <string name="ipva_format">IPVA :&#160;</string>
+    <string name="seguro_format">Seguro :&#160;</string>
+    <string name="multas_format">Multas :&#160;</string>
+    <string name="restricoes_format">Restricoes :&#160;</string>
+    <string name="date_format">Date :&#160;</string>
+    <string name="model">Marca/Modelo</string>
+
+    <!-- login -->
+    <string name="consulta_off_line">Consulta off-line</string>
+    <string name="lets_go">Iniciar operações</string>
+    <string name="login_hint">Efetuar login no Sistransito</string>
+    <string name="email">Email</string>
+    <string name="login_login"><b><i>Login</i></b></string>
+    <string name="password">Senha</string>
+    <string name="login">"Logar"</string>
+    <string name="register">Cadastrar</string>
+    <string name="forgetPassword">Lembrar senha?</string>
+    <string name="name">Nome</string>
+    <string name="orgao_transito">Órgão de trânsito</string>
+    <string name="novo_cadastro">Assinar</string>
+    <string name="cpf">CPF</string>
+    <string name="registro_hint">Cadastrar no Sistrânsito Mobile</string>
+    <string name="registro_concluido">Cadastro no Sistrânsito efetuado com sucesso</string>
+    <string name="registro_nao_concluido">Erro ao cadastrar no Sistrânsito</string>
+    <string name="texto_inserir_email">Insira seu email</string>
+    <string name="texto_inserir_senha">Insira sua senha</string>
+    <string name="mantenha_me_logado">Mantenha-me</string>
+    <!-- result error -->
+    <string name="nehum_resultado_retornado">Nenhum dado retornado</string>
+    <!--  -->
+
+
+    <!-- auto de infração -->
+
+    <string name="auto_de_infracao">Auto de infração</string>
+    <string name="infracao">Infração</string>
+    <string name="condutor">Condutor</string>
+    <string name="texto_titulo_cpf">Digite o Registro, Nome ou CPF</string>
+    <string name="off_line_search">Consulta off-line</string>
+    <string name="encrypt_key">SandroACosta</string>
+    <string name="sem_conexao">Sem conexão com a internet</string>
+    <string name="erro_input">Dados inválidos</string>
+    <string name="carregando">Pesquisando &#8230;&#8230;&#8230;\n</string>
+    <string name="erro_login">Login ou senha inválido</string>
+    <string name="impressao">Módulo de impressão</string>
+    <string name="acesso_ao_sistransito">Consultar veículos</string>
+    <string name="matricula">Matrícula</string>
+    <string name="nome">Nome</string>
+    <string name="orgao_de_transito">Órgão de trânsito</string>
+    <string name="logout">Logout</string>
+    <string name="autos_restantes">Autos restantes</string>
+    <string name="senha">Senha</string>
+    <string name="logar">Logar</string>
+    <string name="cadastrar">Cadastrar</string>
+
+    <!-- tca -->
+    <string name="tca_title">Termo de Comprovação de Alcoolemia - TCA</string>
+    <string name="tca_subtitle_1">Condutor/Veículo</string>
+    <string name="tca_subtitle_2">Questionário</string>
+    <string name="tca_conferir">Conferir</string>
+    <string name="tca_gerar">Gerar</string>
+    <string name="tca_relato_quanto_condutor">Relato Quanto ao Estado do Condutor</string>
+    <string name="tca_se_constatei">Se constatei que o condutor fez uso de substância tóxica, entorpecente ou efeito análogo ?</string>
+    <string name="tca_conclusao">Conclusão</string>
+    <string name="numero_tca">Numero tca</string>
+    <string name="numero_rrd">Numero rrd</string>
+    <string name="tca_fala_alterada">&#160;fala alterada</string>
+    <string name="tca_dificuldade_no_equilíbrio">&#160;dificuldade no equilíbrio</string>
+    <string name="tca_em_relacao_a_sua_verbal_ocorre">Em relação a sua capacidade motora e verbal ocorre:</string>
+    <string name="tca_lembra_dos_atos_cometidos">lembra dos atos cometidos ?</string>
+    <string name="tca_sabe_seu_enderecao">sabe seu endereço ?</string>
+    <string name="tca_em_relacao_a_sua_memoria">Em relação a sua memória:</string>
+    <string name="tca_sabe_a_data_e_a_hora">sabe a data e a hora ?</string>
+    <string name="tca_sabe_onde_esta">sabe onde está ?</string>
+    <string name="tca_em_relacao_a_sua_orientacao">Em relação a sua orientação:</string>
+    <string name="tca_dispersao">&#160;dispersão</string>
+    <string name="tca_exaltacao">&#160;exaltação</string>
+    <string name="tca_falante">&#160;falante</string>
+    <string name="tca_arrogancia">&#160;arrogância</string>
+    <string name="tca_ironia">&#160;ironia</string>
+    <string name="tca_agressividade">&#160;agressividade</string>
+    <string name="tca_em_sua_atitude_ocorre">Em sua atitude ocorre:</string>
+    <string name="tca_odor_de_alcool_no_halito">&#160;odor de álcool no hálito</string>
+    <string name="tca_vomitos">&#160;vômitos</string>
+    <string name="tca_desordem_nas_vertes">&#160;desordem nas vertes</string>
+    <string name="tca_olhos_vermelhos">&#160;olhos vermelhos</string>
+    <string name="tca_solucos">&#160;soluços</string>
+    <string name="tca_sonolencia">&#160;sonolência</string>
+    <string name="tca_o_condutor_apresenta">O condutor apresenta sinais de:</string>
+    <string name="tca_title_nao">&#160;não</string>
+    <string name="tca_sim">&#160;sim</string>
+    <string name="tca_condutor_3">condutor declara ter feito uso de substância tóxica, entorpecente ou efeito análogo ?</string>
+    <string name="tca_condutor_2">condutor declara ter ingerido bebida alcoólica ?</string>
+    <string name="tca_condutor_1">condutor envolveu-se em acidente de trânsito ?</string>
+    <string name="tca_dados_do_fato">Dados do Fato</string>
+    <string name="tca_n_auto">Nº Auto</string>
+    <string name="tca_hora">Hora</string>
+    <string name="tca_data">Data </string>
+    <string name="tca_hora_2">,&#160;Hora:&#160;</string>
+    <string name="tca_data_2">,&#160;Data:&#160; </string>
+    <string name="tca_local_da_ocorrencia">Local da ocorrência</string>
+    <string name="tca_marca_modelo">Marca/Modelo</string>
+    <string name="tca_placa">Placa</string>
+    <string name="tca_identificacao_do_veiculo">Identificação do Veículo</string>
+    <string name="tca_UF">UF</string>
+    <string name="tca_municipio">Município</string>
+    <string name="tca_bairro">Bairro</string>
+    <string name="tca_endereco">Endereço</string>
+    <string name="tca_CPF">CPF</string>
+    <string name="tca_CNH_PPD">CNH/PPD/ACC</string>
+    <string name="tca_nome">Nome</string>
+    <string name="tca_identificacao_do_condutor">Identificação do Condutor</string>
+    <string name="tca_imprimir">Imprimir TCA</string>
+
+    <!-- tav -->
+
+
+    <!-- title -->
+
+    <string name="veiculo">Veículo</string>
+    <string name="termo_de_apreesao_de_veiculo_tav">Termo de Apreesão de Veiculo - TAV</string>
+    <string name="nome_da_empresa">Nome da empresa</string>
+    <string name="nome_do_condutor_do_guincho">Nome do condutor do guincho</string>
+    <string name="acessorios">Acessórios</string>
+    <string name="total">Total</string>
+    <string name="estrutura">Estrutura</string>
+    <string name="parcial">Parcial</string>
+    <string name="selecionar_tudo">Selecionar tudo</string>
+    <string name="condicoes_do_veiculo">Condições do Veículo</string>
+    <string name="item">Item</string>
+    <string name="danos">Danos</string>
+
+    <!-- condutor -->
+    <string name="numero_do_auto">Número do auto</string>
+    <string name="nome_do_proprietario">Nome do proprietário</string>
+    <string name="CPF_CNPJ">CPF/CNPJ</string>
+    <string name="numero_do_renavam">Número do renavam</string>
+    <string name="numero_do_chassi">Número do chassi</string>
+
+    <!-- Veículo -->
+    <!-- Estrutura -->
+    <string name="cabeca_de_alavanca">Cabeça de alavanca</string>
+    <string name="carroceria">Carroceria</string>
+    <string name="forro">Forro</string>
+    <string name="lataria_capo">Lataria capô</string>
+    <string name="lataria_lado_direito">Lataria lado direito</string>
+    <string name="lataria_lado_esquerdo">Lataria lado esquerdo</string>
+    <string name="lataria_tapa_porta_mala">Lataria tampa porta mala</string>
+    <string name="lataria_teto">Lataria teto</string>
+    <string name="motor">Motor</string>
+    <string name="painel">Painel</string>
+    <string name="pintura_capo">Pintura capô</string>
+    <string name="pintura_lado_direito">Pintura lado direito</string>
+    <string name="pintura_lado_esquerdo">Pintura lado esquerdo</string>
+    <string name="pintura_porta_mala">Pintura porta mala</string>
+    <string name="pintura_teto">Pintura teto</string>
+    <string name="radiador">Radiador</string>
+    <string name="vidros_laterais">Vidros laterais</string>
+    <string name="vidro_para_brisa">Vidro para-brisa</string>
+    <string name="vidro_traseiro">Vidro traseiro</string>
+    <!-- Estrutura -->
+
+
+    <!-- acessorio -->
+    <string name="antena_de_radio">Antena de rádio</string>
+    <string name="bagageiro">Bagageiro</string>
+    <string name="bancos">Bancos</string>
+    <string name="bateria">Bateria</string>
+    <string name="calota">Calota</string>
+    <string name="condicionador_de_ar">Condicionador de ar</string>
+    <string name="extintor_de_incendio">Extintor de incêndio</string>
+    <string name="farolete_dianteiro">Farolete dianteiro</string>
+    <string name="farolete_traseiro">Farolete traseiro</string>
+    <string name="macaco">Macaco</string>
+    <string name="para_choque_dianteiro">Pára-choque dianteiro</string>
+    <string name="para_choque_traseiro">Pára-choque traseiro</string>
+    <string name="para_sol_do_condutor">Pára-sol do condutor</string>
+    <string name="pneus">Pneus</string>
+    <string name="pneus_estepe">Estepe</string>
+    <string name="radio">Rádio</string>
+    <string name="retrovisor_interno">Retrovisor interno</string>
+    <string name="retrovisor_externo_direito">Retrovisor externo direito</string>
+    <string name="tapete">Tapete</string>
+    <string name="triangulo">Triângulo</string>
+    <string name="volante">Volante</string>
+    <string name="guidam">Guidan</string>
+    <!-- acessorio -->
+
+
+    <!-- Geral -->
+
+    <string name="odometro">Odômetro</string>
+    <string name="marcador_de_combustivel">Marcador de combustível</string>
+    <string name="danificado">&#160;Danificado</string>
+    <string name="vazio">&#160;Vazio</string>
+    <string name="um_quarto">&#160;&#188;</string>
+    <string name="tres_quarto"> &#160;&#189;</string>
+    <string name="meio_tanque"> &#160;&#190;</string>
+    <string name="cheio">&#160;Cheio</string>
+    <string name="remocao_atraves_de">Remoção através de:</string>
+    <string name="guincho">Guincho </string>
+
+    <!-- tav -->
+
+
+    <!-- rrd -->
+    <string name="rrd_qtd_de_dias_para_regularizacao">Dias para regularização</string>
+    <string name="rrd_numero_auto">Número AIT</string>
+    <string name="rrd_recebemos_de">Recebemos de</string>
+    <string name="rrd_documento">Documento</string>
+    <string name="rrd_informacoes">Informações</string>
+    <string name="rrd_numero_crlv">Número CRLV</string>
+    <string name="rrd_placa">Placa</string>
+    <string name="rrd_uf">UF</string>
+    <string name="rrd_numero_registro">Registro CNH/PPD/ACC</string>
+    <string name="rrd_validade">Validade</string>
+    <string name="btn_gerar_rrd">Gerar RRD</string>
+    <string name="imprimir_rrd">Imprimir RRD</string>
+
+    <!-- autode -->
+    <string name="auto_de_numero_de_serie">Número de série</string>
+    <string name="auto_de_codigo_do_municipio">Código do Município</string>
+    <string name="auto_de_cor_do_veiculo">Cor do veículo</string>
+    <string name="rrd_motivo_para_recolhimento">Motivo para recolhimento</string>
+    <string name="auto_de_marca">Marca</string>
+    <string name="auto_de_modelo">Modelo</string>
+    <string name="auto_de_valor_considerado">Valor considerado</string>
+    <string name="auto_numero_da_amostra">Número da amostra/TCA</string>
+    <string name="acao_autocompletar">Consulta</string>
+    <string name="titito_tela_print">Módulo de impressão</string>
+    <string name="botao_abrir">Abrir</string>
+    <string name="informacao_do_auto">Informação do Auto</string>
+    <string name="brotao_fechar">Fechar</string>
+    <string name="botao_enviar">Enviar</string>
+    <string name="print_preview">Visualizar</string>
+    <string name="auto_de_pais">Pais</string>
+    <string name="auto_de_UF">UF</string>
+    <string name="auto_de_municipio">Município</string>
+    <string name="descricao_da_infracao">Descrição da infração</string>
+    <string name="descricao_do_equipamento">Descrição do equipamento</string>
+    <string name="enquadra">Cód. Infração</string>
+    <string name="desdob">Desd.</string>
+    <string name="amparo_legal">Amparo Legal</string>
+    <string name="local">Local</string>
+    <string name="data">Data</string>
+    <string name="hora">Hora</string>
+    <string name="equipamento_de_afericao_utilizado">Equipamento de aferição utilizado</string>
+    <string name="modelo_equipamento">Modelo</string>
+    <string name="medicao_realizada">Medição realizada</string>
+    <string name="botao_conferir">Conferir</string>
+    <string name="apagar">Apagar</string>
+    <string name="CNH">&#160;CNH </string>
+    <string name="CLRV">&#160;CLRV</string>
+    <string name="PPD">&#160;PPD </string>
+    <string name="procedimentos">Procedimentos em relação ao veículo</string>
+    <string name="retencao">&#160;Retenção</string>
+    <string name="remocao">&#160;Remoção</string>
+    <string name="observacao">Observação</string>
+    <string name="numero_tav">Numero tav</string>
+    <string name="identificacao_do_embarcador">Identificação do embarcador ou expedidor</string>
+    <string name="CNPJ_CPF">CNPJ/CPF</string>
+    <string name="numero_auto">Numero auto</string>
+    <string name="identificacao_do_transportador">Identificação do transportador</string>
+    <string name="recolhimento_de_documentos">Recolhimento de documentos</string>
+    <string name="gerar">Gerar</string>
+    <string name="placa">Placa</string>
+    <string name="marca_modelo">Marca/Modelo</string>
+    <string name="especie">Espécie</string>
+    <string name="categoria">Categoria</string>
+    <string name="nome_do_condutor">Nome do condutor</string>
+    <string name="CNH_PPD">CNH/PPD/ACC</string>
+    <string name="CPF">CPF</string>
+    <string name="botao_pesquisar">Consultar</string>
+    <string name="voice">CNH</string>
+    <string name="camera">Câmera</string>
+    <string name="setting">Configurar</string>
+    <string name="log">Log</string>
+    <string name="ajuda_sobre_app">Ajuda</string>
+    <string name="profile">Profile</string>
+    <string name="botao_consultar">Consultar</string>
+    <string name="titulo_consulta_placas">Consulta Veicular</string>
+    <string name="placa_veiculo">Placa</string>
+    <string name="marca_veiculo">Marca/Modelo</string>
+    <string name="tipo_veiculo">Tipo</string>
+    <string name="licenciamento_anual">Ano Licenciamento</string>
+    <string name="data_licenciamento">Data Licenciamento</string>
+    <string name="status">Status</string>
+    <string name="infracoes">Infrações</string>
+    <string name="restricoes_impedimentos">Restrições/Impedimentos</string>
+    <string name="cor_veiculo">Cor</string>
+    <string name="titulo_tela_consulta_placa">Informe a placa do veículo</string>
+    <string name="botao_checar">CHECAR SITUAÇÃO</string>
+    <string name="numero">Número</string>
+    <string name="caracter">Caracter</string>
+    <string name="IPVA">IPVA</string>
+    <string name="seguro">Seguro</string>
+    <string name="imagem_status">Status da imagem</string>
+    <string name="bacground_botao_autuar">#EEEEEE</string>
+    <string name="botao_autuar">Autuar</string>
+    <string name="ver_log_consultas">Ver logs</string>
+    <string name="tipo_documento_apresentado">Domumento apresentado</string>
+    <string name="tipo_rg">RG</string>
+    <string name="tipo_cpf">CPF</string>
+    <string name="tipo_outros">Outros</string>
+    <string name="uf_cnh">UF</string>
+
+
+    <!-- Setting -->
+    <string name="vibrate">Vibrar</string>
+    <string name="vibrate_hint">Vibrar o celular quando o status for atrasado</string>
+    <string name="ringtone">Ringtone</string>
+    <string name="ringtone_hint">Ringing quando o status for atrasado</string>
+    <string name="auto_backup">Auto backup</string>
+    <string name="auto_backup_hint">Backup do resultado da pesquisa</string>
+    <string name="titulo_sincronizacao">Replicar dados</string>
+    <string name="strat_sync">Start Sync</string>
+    <string name="strat_sync_info">Synconization android databse to webserver</string>
+
+    <!--  -->
+    <string name="exportar">Exportar</string>
+    <string name="exportar_msg">Exportar informações do veículo</string>
+    <string name="config_geral">CONFIGURAÇÕES GERAIS</string>
+    <string name="config_backup">CONFIGURAÇÃO DE BACKUP</string>
+    <string name="idioma_english_generico">Inglês (Genérico)</string>
+    <string name="idioma_portugues">Português (Brasil)</string>
+    <string name="idioma_english_us">Inglês (US)</string>
+    <string name="voice_language_setting">Configuração do idioma de voz</string>
+    <string name="delete">Excluir</string>
+    <string name="autuar">Autuar</string>
+    <string name="tav">TAV</string>
+    <string name="tca">TCA</string>
+    <string name="rrd">RRD</string>
+    <string name="print_auto">Imprimir Auto</string>
+    <string name="opcoes_log">Histórico de Documentos</string>
+    <string name="listar_placas">Placas consultadas</string>
+    <string name="listar_autos">Autos emitidos</string>
+    <string name="listar_tav">TAV emitidos</string>
+    <string name="listar_tca">TCA emitidos</string>
+    <string name="listar_rrd">RRD emitidos</string>
+
+    <!-- other -->
+    <string name="sincronizacao_concluida">Sincronização concluída.</string>
+    <string name="nao_precisa_sincronizar">Há necessidade de sincronizar a base de dados remotamente.</string>
+    <string name="sincronizacao_mgs">Sincronizando base de dados remotamente. Por favor, aguarde.</string>
+    <string name="titulo_tela_sincronizacao">Informações</string>
+    <string name="mgs_sincronizacao">É necessário carregar numeração dos documentos.</string>
+    <string name="conexao_sincronizacao">Conexão com internet não disponível. Conecte com a internet e tente novamente!</string>
+
+    <!-- Autos de Infração -->
+    <string name="autos_de_Infracao">Autos de Infração</string>
+    <string name="autos_realizados">Autos realizados:&#160;</string>
+    <string name="tav_realizados">Tav\'s realizados:&#160;</string>
+    <string name="tca_realizados">Tca\'s realizados:&#160;</string>
+    <string name="rrd_realizados">Rrd\'s realizados:&#160;</string>
+    <string name="restante">Restante:</string>
+
+    <!-- bluetooth -->
+    <string name="celular_sem_bluetooth">Seu dispositivo não suporta bluetooth</string>
+    <string name="msg_impressora_conectando">Conectando com a impressora bluetooth</string>
+    <string name="msg_impressora_conectada">Conectado a impressora bluetooth</string>
+    <string name="msg_falha_conexao_impressora">Falha ao conectar com a impressora bluetooth</string>
+    <string name="msg_procurando_impressora">Procurando por impressora bluetooth</string>
+    <string name="msg_impressora_nao_encontrada">Impressora bluetooth não encontrada</string>
+    <string name="msg_dados_enviados_impressora">Dados enviados para impressão</string>
+    <string name="msg_impressora_desconectada">Encerrada a conexão com impressora bluetooth</string>
+
+</resources>

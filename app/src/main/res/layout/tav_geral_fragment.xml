@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/yellow"
+    android:orientation="vertical"
+    android:padding="@dimen/widght_padding" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="@dimen/widght_padding" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/widght_padding_3"
+                android:text="@string/odometro"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/whight" />
+
+            <EditText
+                android:id="@+id/et_odometo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/yellow_light"
+                android:gravity="left|center_vertical"
+                android:inputType="number"
+                android:padding="@dimen/widght_padding"
+                android:textColor="@color/whight"
+                android:textCursorDrawable="@null" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="vertical" >
+            
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/widght_padding_3"
+                    android:text="@string/marcador_de_combustivel"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/whight" />
+            
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+            
+                    <RadioGroup
+                        android:id="@+id/rg_marcador_de_conbutivel_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+            
+                        <RadioButton
+                            android:id="@+id/radio0"
+                            android:layout_height="wrap_content"
+                            android:text="@string/danificado"
+                            android:textColor="@color/whight" />
+            
+                        <RadioButton
+                            android:id="@+id/radio1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/um_quarto"
+                            android:textColor="@color/whight" />
+            
+                        <RadioButton
+                            android:id="@+id/radio2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tres_quarto"
+                            android:textColor="@color/whight" />
+                    </RadioGroup>
+            
+                    <RadioGroup
+                        android:id="@+id/rg_marcador_de_conbutivel_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+            
+                        <RadioButton
+                            android:id="@+id/radio4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vazio"
+                            android:textColor="@color/whight" />
+            
+                        <RadioButton
+                            android:id="@+id/radio5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/meio_tanque"
+                            android:textColor="@color/whight" />
+            
+                        <RadioButton
+                            android:id="@+id/radio6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cheio"
+                            android:textColor="@color/whight" />
+                            
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/widght_padding_3"
+            android:text="@string/remocao_atraves_de"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/whight" />
+
+        <Spinner
+            android:id="@+id/sp_remocao_atraves_de"
+            style="@style/Theam.Spinner_theam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/widght_padding"
+            android:textAlignment="textStart"
+            android:textDirection="firstStrong" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/yellow"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_av_nome_da_empresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/widght_padding_3"
+                    android:text="@string/nome_da_empresa"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/whight" />
+
+                <EditText
+                    android:id="@+id/et_nome_da_empresa"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/yellow_light"
+                    android:gravity="left|center_vertical"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/widght_padding"
+                    android:textColor="@color/whight"
+                    android:textCursorDrawable="@null" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/tv_nome_do_condutor_do_guincho"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/widght_padding_3"
+                    android:text="@string/nome_do_condutor_do_guincho"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/whight" />
+
+                <EditText
+                    android:id="@+id/et_nome_do_condutor_do_guincho"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/yellow_light"
+                    android:gravity="left|center_vertical"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/widght_padding"
+                    android:textColor="@color/whight"
+                    android:textCursorDrawable="@null" >
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/widght_padding_3"
+                android:text="@string/observacao"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/whight" />
+
+            <EditText
+                android:id="@+id/et_tav_observacao"
+                android:layout_width="fill_parent"
+                android:layout_height="120dip"
+                android:background="@color/yellow_light"
+                android:gravity="left|top"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/widght_padding"
+                android:textColor="@color/whight"
+                android:textCursorDrawable="@null" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/widght_padding" >
+
+            <Button
+                android:id="@+id/btn_tav_conferir"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/indicator_width"
+                android:layout_weight="1"
+                android:background="@drawable/btn_yellow_2"
+                android:padding="@dimen/widght_padding"
+                android:text="@string/botao_conferir"
+                android:textColor="@color/whight" />
+
+            <Button
+                android:id="@+id/btn_tav_gerar"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/indicator_width"
+                android:layout_weight="1"
+                android:background="@drawable/btn_yellow_2"
+                android:padding="@dimen/widght_padding"
+                android:text="@string/gerar"
+                android:textColor="@color/whight" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
