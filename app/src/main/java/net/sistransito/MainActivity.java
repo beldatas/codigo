@@ -16,7 +16,7 @@ import net.sistransito.mobile.main.MainUserActivity;
 import net.sistrnsitomobile.R;
 
 public class MainActivity extends AppCompatActivity {
-// just a test of source treee 
+    // second test
     private LinearLayout linear_layout;
     private InstallTask mTask;
     private ProgressView mProgressBar = null;
