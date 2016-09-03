@@ -20,6 +20,7 @@ public class WebClient {
     public static final String URL_NUMERO_TCA = BASE_URl + "op=numero_tca";
     public static final String URL_NUMERO_RRD = BASE_URl + "op=numero_rrd";
     public static final String URL_EQUIPAMENTOS = BASE_URl + "op=equipamentos";
+    public static final String URL_CLOGIN = BASE_URl + "op=clogin";
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 

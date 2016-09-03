@@ -5,13 +5,15 @@
         <item>Configurações</item>
         <item>Ajuda</item>
     </string-array>
-    <string name="invalid_inout">Invalid inout</string>
-    <string name="processing">Carregando</string>
-    <string name="login_fail">Login fail</string>
-    <string name="email_senha_invalid">Email ou senha invlidos</string>
-    <string name="information">Informaoes</string>
+    <string name="invalid_in">Entrada inválida</string>
+    <string name="erro_carregar_img">Erro ao carregar imagem</string>
+    <string name="erro_desconhecido">Ocorreu algum erro</string>
+    <string name="processing">Carregando...</string>
+    <string name="login_fail">Falha no login</string>
+    <string name="email_senha_invalid">Email ou senha inválidos</string>
+    <string name="information">Informações</string>
     <string name="deletando">Deletando</string>
-    <string name="marcar_tudo">Checando tudo</string>
+    <string name="marcar_tudo">Checar tudo</string>
     <string name="menu_deletar">Deletar</string>
     <string name="nome_app">Sistrânsito Mobile</string>
     <string name="menu_config">Configurações</string>
@@ -342,13 +344,13 @@
 
     <!-- Setting -->
     <string name="vibrate">Vibrar</string>
-    <string name="vibrate_hint">Vibrar o celular quando o status for atrasado</string>
+    <string name="vibrate_hint">Vibrar o dispositivo quando o status for atrasado</string>
     <string name="ringtone">Ringtone</string>
     <string name="ringtone_hint">Ringing quando o status for atrasado</string>
     <string name="auto_backup">Auto backup</string>
     <string name="auto_backup_hint">Backup do resultado da pesquisa</string>
     <string name="titulo_sincronizacao">Replicar dados</string>
-    <string name="strat_sync">Start Sync</string>
+    <string name="strat_sync">Iniciar sincronização</string>
     <string name="strat_sync_info">Synconization android databse to webserver</string>
 
     <!--  -->
@@ -369,9 +371,9 @@
     <string name="opcoes_log">Histórico de Documentos</string>
     <string name="listar_placas">Placas consultadas</string>
     <string name="listar_autos">Autos emitidos</string>
-    <string name="listar_tav">TAV emitidos</string>
-    <string name="listar_tca">TCA emitidos</string>
-    <string name="listar_rrd">RRD emitidos</string>
+    <string name="listar_tav">TAV's emitidos</string>
+    <string name="listar_tca">TCA's emitidos</string>
+    <string name="listar_rrd">RRD's emitidos</string>
 
     <!-- other -->
     <string name="sincronizacao_concluida">Sincronização concluída.</string>
@@ -379,7 +381,7 @@
     <string name="sincronizacao_mgs">Sincronizando base de dados remotamente. Por favor, aguarde.</string>
     <string name="titulo_tela_sincronizacao">Informações</string>
     <string name="mgs_sincronizacao">É necessário carregar numeração dos documentos.</string>
-    <string name="conexao_sincronizacao">Conexão com internet não disponível. Conecte com a internet e tente novamente!</string>
+    <string name="conexao_sincronizacao">Conexão com internet não disponível. Conecte seu dispositivo e tente novamente!</string>
 
     <!-- Autos de Infração -->
     <string name="autos_de_Infracao">Autos de Infração</string>
@@ -392,11 +394,11 @@
     <!-- bluetooth -->
     <string name="celular_sem_bluetooth">Seu dispositivo não suporta bluetooth</string>
     <string name="msg_impressora_conectando">Conectando com a impressora bluetooth</string>
-    <string name="msg_impressora_conectada">Conectado a impressora bluetooth</string>
+    <string name="msg_impressora_conectada">Conectado à impressora bluetooth</string>
     <string name="msg_falha_conexao_impressora">Falha ao conectar com a impressora bluetooth</string>
     <string name="msg_procurando_impressora">Procurando por impressora bluetooth</string>
     <string name="msg_impressora_nao_encontrada">Impressora bluetooth não encontrada</string>
     <string name="msg_dados_enviados_impressora">Dados enviados para impressão</string>
-    <string name="msg_impressora_desconectada">Encerrada a conexão com impressora bluetooth</string>
+    <string name="msg_impressora_desconectada">Encerrada conexão com impressora bluetooth</string>
 
 </resources>

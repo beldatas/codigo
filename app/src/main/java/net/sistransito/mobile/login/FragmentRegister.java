@@ -123,7 +123,7 @@ public class FragmentRegister extends Fragment implements
         cpf = et_cpf.getText().toString();
         password = et_password.getText().toString();
 
-        String url = "http://sistransito.net/movel/dosis.pl?op=clogin"
+        String url = WebClient.URL_CLOGIN
                 + "&imei=" + "&orgao=" + ime.getIME() + orgao + "&nome=" + name
                 + "&mat=" + matricula + "&cpf=" + cpf + "&login=" + login
                 + "&senha=" + password;
@@ -193,25 +193,25 @@ public class FragmentRegister extends Fragment implements
 
     private boolean checkInput() {
         if (et_name.getText().toString().equals("")) {
-            et_name.setError(getResources().getString(R.string.invalid_inout));
+            et_name.setError(getResources().getString(R.string.invalid_in));
             return false;
         } else if (et_orgao.getText().toString().equals("")) {
-            et_orgao.setError(getResources().getString(R.string.invalid_inout));
+            et_orgao.setError(getResources().getString(R.string.invalid_in));
             return false;
         } else if (et_matricula.getText().toString().equals("")) {
-            et_matricula.setError(getResources().getString(R.string.invalid_inout));
+            et_matricula.setError(getResources().getString(R.string.invalid_in));
             return false;
         } else if (et_cpf.getText().toString().equals("")) {
-            et_cpf.setError(getResources().getString(R.string.invalid_inout));
+            et_cpf.setError(getResources().getString(R.string.invalid_in));
             return false;
         } else if (et_login.getText().toString().equals("")) {
-            et_login.setError(getResources().getString(R.string.invalid_inout));
+            et_login.setError(getResources().getString(R.string.invalid_in));
             return false;
         } else if (et_password.getText().toString().equals("")) {
-            et_password.setError(getResources().getString(R.string.invalid_inout));
+            et_password.setError(getResources().getString(R.string.invalid_in));
             return false;
         } else if (fileName == null) {
-            Toast.makeText(getActivity(), "You haven't picked Image",
+            Toast.makeText(getActivity(), getResources().getString(R.string.erro_carregar_img),
                     Toast.LENGTH_LONG).show();
             return false;
         } else {
@@ -251,13 +251,13 @@ public class FragmentRegister extends Fragment implements
                 params.put("profile_image", fileName);
 
             } else {
-                Toast.makeText(getActivity(), "You haven't picked Image",
+                Toast.makeText(getActivity(), getResources().getString(R.string.erro_carregar_img),
                         Toast.LENGTH_LONG).show();
                 fileName = null;
             }
         } catch (Exception e) {
 
-            Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_LONG)
+            Toast.makeText(getActivity(), getResources().getString(R.string.erro_desconhecido), Toast.LENGTH_LONG)
                     .show();
             fileName = null;
         }

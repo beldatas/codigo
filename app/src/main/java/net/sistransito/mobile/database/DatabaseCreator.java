@@ -84,8 +84,6 @@ public class DatabaseCreator {
 		return databaseAdapterSetting;
 	}
 
-
-
 	public static PlacaSearchDatabaseAdapter getPlacaSearchDatabaseAdapter(
 			Context context) {
 

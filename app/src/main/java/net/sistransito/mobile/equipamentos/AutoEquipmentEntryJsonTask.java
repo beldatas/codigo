@@ -20,7 +20,6 @@ public class AutoEquipmentEntryJsonTask {
 	public AutoEquipmentEntryJsonTask(String json, Context context) {
 		this.context = context;
 		this.json = json;
-
 	}
 
 	public void prepareEntry() {
@@ -34,7 +33,8 @@ public class AutoEquipmentEntryJsonTask {
 				object = jsonArray.getJSONObject(i);
 				autoEquipmentEntry = new AutoEquipmentEntry(
 						object.getString("descricao"),
-						object.getString("marca"), object.getString("modelo"),
+						object.getString("marca"),
+						object.getString("modelo"),
 						object.getString("validade"),
 						object.getString("numero_serie"));
 				entries.add(autoEquipmentEntry);

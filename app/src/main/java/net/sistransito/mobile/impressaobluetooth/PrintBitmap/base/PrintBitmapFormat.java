@@ -117,6 +117,40 @@ public class PrintBitmapFormat extends BasePaint {
         System.gc();
     }
 
+    public void createTableTav(String title_1, String value_1, String title_2, String value_2, boolean isAdd, TableCellAlign align) {
+        if (!isAdd) {
+            y_position += TABLE_BORDER;
+        }
+        int y_int = y_position;
+        int x2 = 0;
+
+        if (TableCellAlign.MIDDLE == align) {
+            x2 = (int) PAGE_WIDTH / 2;
+        } else if (TableCellAlign.LEFT == align) {
+
+            int width_1 = Math.max(TextFormat.getTextBoundWidth(title_1, paintNormal),
+                    TextFormat.getTextBoundWidth(value_1, paintTitleBold));
+            x2 = width_1 + MARGIN_LARGE + MARGIN_LARGE + MARGIN_LARGE;
+
+        } else if (TableCellAlign.RIGHT == align) {
+            int width_1 = Math.max(TextFormat.getTextBoundWidth(title_2, paintNormal),
+                    TextFormat.getTextBoundWidth(value_2, paintMedio));
+            x2 = x_position_end - (width_1 + MARGIN_LARGE + MARGIN_LARGE + MARGIN_LARGE);
+        }
+        setNewLine(1);
+        drawText(title_1, x_text_start, x2, y_position, paintMedio, Paint.Align.CENTER);
+        y_position = drawText(title_2, x2 + MARGIN_LARGE, x_position_end, y_position, paintMedio, Paint.Align.CENTER);
+        setNewLine(2);
+
+        drawText(value_1, x_position_start, x2, y_position, paintNormal, Paint.Align.LEFT);
+        y_position = drawText(value_2, x2, x_position_end, y_position, paintNormal, Paint.Align.LEFT);
+        setNewLine(2);
+
+        drawBox(new Rect(x_position_start, y_int, x2, y_position));
+        drawBox(new Rect(x2, y_int, x_position_end, y_position));
+        System.gc();
+    }
+
     public void createTable(String title_1, String value_1, String title_2, String value_2, boolean isAdd, TableCellAlign align) {
         if (!isAdd) {
             y_position += TABLE_BORDER;
@@ -266,16 +300,15 @@ public class PrintBitmapFormat extends BasePaint {
     }
 
     public void createQuotes(String s1, String s2, boolean isAdd) {
-    // s1  text show which font size tile or normal , title bold?
-        //s2  size tile or normal , title bold? yes
+
         if (!isAdd) {
             y_position += TABLE_BORDER;
         }
         int y_int = y_position;
-        setNewLine(1);//s1
+        setNewLine(1);
         y_position = drawText(s1, x_text_start, x_position_end, y_position, paintNormal, Paint.Align.LEFT);
         setNewLine(1);
-        createQuotes(s2, false); //not possible to increase this font. I'd like increase s2.Ok?ok
+        createQuotes(s2, false);
         setNewLine(1);
         drawBox(new Rect(x_position_start, y_int, x_position_end, y_position));
         System.gc();
