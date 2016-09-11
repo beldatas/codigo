@@ -205,7 +205,7 @@ public class TAVDatabaseAdapter {
 
 		values.put(TAVDatabaseHelper.ODOMETRO, data.getOdometro());
 		values.put(TAVDatabaseHelper.MARCADOR_DE_CONBUTIVEL,
-				data.getMarcador_de_conbutivel());
+				data.getMarcador_de_combustivel());
 		values.put(TAVDatabaseHelper.REMOCAO_ATRAVES_DE,
 				data.getRemocao_atraves_de());
 		values.put(TAVDatabaseHelper.OBSERVACAO, data.getObservacao());
@@ -345,7 +345,7 @@ public class TAVDatabaseAdapter {
 				// Geral
 				map.put(TAVDatabaseHelper.ODOMETRO, data.getOdometro());
 				map.put(TAVDatabaseHelper.MARCADOR_DE_CONBUTIVEL,
-						data.getMarcador_de_conbutivel());
+						data.getMarcador_de_combustivel());
 				map.put(TAVDatabaseHelper.REMOCAO_ATRAVES_DE,
 						data.getRemocao_atraves_de());
 				map.put(TAVDatabaseHelper.OBSERVACAO, data.getObservacao());

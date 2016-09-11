@@ -27,7 +27,7 @@ public class TAVData implements Serializable {
 			macaco, para_choque_dianteiro, para_choque_traseiro,
 			para_sol_do_condutor, pneus, pneus_estepe, radio,
 			retrovisor_interno, retrovisor_externo_direito, tapete, triangulo,
-			volante, guidam, odometro, marcador_de_conbutivel,
+			volante, guidam, odometro, marcador_de_combustivel,
 			remocao_atraves_de, nome_da_empresa, nome_do_condutor_do_guincho,
 			observacao, numero_tav;
 
@@ -252,8 +252,8 @@ public class TAVData implements Serializable {
 		return odometro;
 	}
 
-	public String getMarcador_de_conbutivel() {
-		return marcador_de_conbutivel;
+	public String getMarcador_de_combustivel() {
+		return marcador_de_combustivel;
 	}
 
 	public String getRemocao_atraves_de() {
@@ -452,8 +452,8 @@ public class TAVData implements Serializable {
 		this.odometro = odometro;
 	}
 
-	public void setMarcador_de_conbutivel(String marcador_de_conbutivel) {
-		this.marcador_de_conbutivel = marcador_de_conbutivel;
+	public void setMarcador_de_combustivel(String marcador_de_combustivel) {
+		this.marcador_de_combustivel = marcador_de_combustivel;
 	}
 
 	public void setRemocao_atraves_de(String remocao_atraves_de) {
@@ -466,7 +466,7 @@ public class TAVData implements Serializable {
 
 	public TAVData() {
 
-		numero_do_auto = nome_do_proprietario = cpf_cnpj = numero_do_renavam = numero_do_chassi = cabeca_de_alavanca = carroceria = forro = lataria_capo = lataria_lado_direito = lataria_lado_esquerdo = lataria_tapa_porta_mala = lataria_teto = motor = painel = pintura_capo = pintura_lado_direito = pintura_lado_esquerdo = pintura_porta_mala = pintura_teto = radiador = vidros_laterais = vidro_para_brisa = vidro_traseiro = antena_de_radio = bagageiro = bancos = bateria = calota = condicionador_de_ar = extintor_de_incendio = farolete_dianteiro = farolete_traseiro = macaco = para_choque_dianteiro = para_choque_traseiro = para_sol_do_condutor = pneus = pneus_estepe = radio = retrovisor_interno = retrovisor_externo_direito = tapete = triangulo = volante = guidam = odometro = marcador_de_conbutivel = remocao_atraves_de = nome_da_empresa = nome_do_condutor_do_guincho = observacao = numero_tav = "";
+		numero_do_auto = nome_do_proprietario = cpf_cnpj = numero_do_renavam = numero_do_chassi = cabeca_de_alavanca = carroceria = forro = lataria_capo = lataria_lado_direito = lataria_lado_esquerdo = lataria_tapa_porta_mala = lataria_teto = motor = painel = pintura_capo = pintura_lado_direito = pintura_lado_esquerdo = pintura_porta_mala = pintura_teto = radiador = vidros_laterais = vidro_para_brisa = vidro_traseiro = antena_de_radio = bagageiro = bancos = bateria = calota = condicionador_de_ar = extintor_de_incendio = farolete_dianteiro = farolete_traseiro = macaco = para_choque_dianteiro = para_choque_traseiro = para_sol_do_condutor = pneus = pneus_estepe = radio = retrovisor_interno = retrovisor_externo_direito = tapete = triangulo = volante = guidam = odometro = marcador_de_combustivel = remocao_atraves_de = nome_da_empresa = nome_do_condutor_do_guincho = observacao = numero_tav = "";
 
 	}
 
@@ -506,7 +506,7 @@ public class TAVData implements Serializable {
 				.getColumnIndex(TAVDatabaseHelper.PLACA));
 		
 		
-		Log.d("pppppp", placa);
+		Log.d("placa", placa);
 		numero_do_auto = myCursor.getString(myCursor
 				.getColumnIndex(TAVDatabaseHelper.NUMERO_DO_AUTO));
 		nome_do_proprietario = myCursor.getString(myCursor
@@ -613,7 +613,7 @@ public class TAVData implements Serializable {
 		odometro = myCursor.getString(myCursor
 				.getColumnIndex(TAVDatabaseHelper.ODOMETRO));
 
-		marcador_de_conbutivel = myCursor.getString(myCursor
+		marcador_de_combustivel = myCursor.getString(myCursor
 				.getColumnIndex(TAVDatabaseHelper.MARCADOR_DE_CONBUTIVEL));
 		remocao_atraves_de = myCursor.getString(myCursor
 				.getColumnIndex(TAVDatabaseHelper.REMOCAO_ATRAVES_DE));
@@ -829,7 +829,7 @@ public class TAVData implements Serializable {
 				+ context.getResources().getString(
 						R.string.marcador_de_combustivel)
 				+ getNewline()
-				+ marcador_de_conbutivel
+				+ marcador_de_combustivel
 				+ getNewline_2()
 				+ context.getResources().getString(R.string.remocao_atraves_de)
 				+ getNewline()

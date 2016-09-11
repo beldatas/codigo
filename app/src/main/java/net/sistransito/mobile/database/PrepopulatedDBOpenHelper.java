@@ -51,11 +51,11 @@ public class PrepopulatedDBOpenHelper extends SQLiteOpenHelper {
 	public static final String INFRACOES_ENQUADRA = "enquadramento";
 	public static final String INFRACOES_DESDOB = "desdobramento";
 	public static final String INFRACOES_ART = "artigo";
-	public static final String INFERACOES_OBSERVACAO = "observacao";
+	public static final String INFRACOES_OBSERVACAO = "observacao";
 
 	// municipios
 	public static final String TABLE_NAME_MUNICIPIOS = "municipios";
-	public static final String MUNICIPIOS_MUNICIPIOS = "municipio";
+	public static final String NOME_DO_MUNICIPIO = "municipio";
 	public static final String MUNICIPIOS_COD = "cod";
 	public static final String MUNICIPIOS_UF = "uf";
 

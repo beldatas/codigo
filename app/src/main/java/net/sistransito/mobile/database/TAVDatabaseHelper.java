@@ -14,13 +14,8 @@ public class TAVDatabaseHelper extends SQLiteOpenHelper {
 	public static final String PLACA = "placa";
 
 	// Condutor
-	public static final String NUMERO_DO_AUTO = "numero_do_auto";// public
-																	// static
-																	// final
-																	// String
-																	// NUMERO_AUTO
-																	// =
-																	// "numero_auto";
+	public static final String NUMERO_DO_AUTO = "numero_do_auto";
+	public static final String NUMERO_TAV = "numero_tav";
 	public static final String NOME_DO_PROPRIETARIO = "nome_do_proprietario";
 	public static final String CPF_CNPJ = "cpf_cnpj";
 	public static final String NUMERO_DO_RENAVAM = "numero_do_renavam";
@@ -81,8 +76,6 @@ public class TAVDatabaseHelper extends SQLiteOpenHelper {
 
 	public static final String NOME_DA_EMPRESA = "nome_da_empresa";
 	public static final String NOME_DO_CONDUTOR_DO_GUINCHO = "nome_condutor_guincho";
-
-	public static final String NUMERO_TAV = "numero_tav";
 
 	// TCA DE TABLE SQL
 	public static final String TABLE_SQL = "CREATE TABLE " + TABLE_NAME + " ("

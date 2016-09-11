@@ -22,7 +22,6 @@ public class TAVEstruturaAcessoriosSectionsPagerAdapter extends
 			return new TAVEstruturaFragment();
 		case 1:
 			return new TAVAcessoriosFragment();
-
 		}
 		return null;
 	}

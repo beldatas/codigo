@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import net.sistransito.mobile.tav.TAVConductorFragment;
-import net.sistransito.mobile.tav.TAVGegrarFragment;
+import net.sistransito.mobile.tav.TAVGerarFragment;
 import net.sistransito.mobile.tav.TAVVeiculoFragment;
 
 public class TAVStartSectionsPagerAdapter extends FragmentPagerAdapter {
@@ -23,7 +23,7 @@ public class TAVStartSectionsPagerAdapter extends FragmentPagerAdapter {
             case 1:
                 return TAVVeiculoFragment.newInstance();
             case 2:
-                return TAVGegrarFragment.newInstance();
+                return TAVGerarFragment.newInstance();
         }
         return null;
     }

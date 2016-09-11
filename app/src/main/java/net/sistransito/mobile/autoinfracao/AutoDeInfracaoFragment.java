@@ -80,10 +80,8 @@ public class AutoDeInfracaoFragment extends
 	}
 
 	private void initializedView() {
-		auto_autocompletar_infracao = (AutoCompleteTextView) view
-				.findViewById(R.id.autode_autocomplete_infracao);
-		et_auto_enquadra = (EditText) view
-				.findViewById(R.id.et_autode_enquadra);
+		auto_autocompletar_infracao = (AutoCompleteTextView) view.findViewById(R.id.autode_autocomplete_infracao);
+		et_auto_enquadra = (EditText) view.findViewById(R.id.et_autode_enquadra);
 		et_auto_desdob = (EditText) view.findViewById(R.id.et_autode_desdob);
 		et_auto_art = (EditText) view.findViewById(R.id.et_autode_art);
 
@@ -126,6 +124,7 @@ public class AutoDeInfracaoFragment extends
 		et_auto_enquadra.setEnabled(false);
 		et_auto_desdob.setEnabled(false);
 		et_auto_art.setEnabled(false);
+
 		setMunicipioAutoComplete();
 		setInfracaoAutoComplete();
 		setDescricaoSpinner();
@@ -230,7 +229,7 @@ public class AutoDeInfracaoFragment extends
 
 			auto_observacao
 					.add(cursor.getString(cursor
-							.getColumnIndex(PrepopulatedDBOpenHelper.INFERACOES_OBSERVACAO)));
+							.getColumnIndex(PrepopulatedDBOpenHelper.INFRACOES_OBSERVACAO)));
 			cursor.moveToNext();
 		}
 		cursor.close();
@@ -291,7 +290,7 @@ public class AutoDeInfracaoFragment extends
 		} else if (data.isStoreFullData()) {
 			getRecomandedUpdate();
 			addListener();
-			setViewforNovaAuto();
+			setViewNovoAuto();
 		} else {
 			addListener();
 			initializedSelectetItems();
@@ -444,26 +443,20 @@ public class AutoDeInfracaoFragment extends
 		municipio_array = new ArrayList<String>();
 		cod_array = new ArrayList<String>();
 		uf_array = new ArrayList<String>();
+
 		Cursor myCursor = ((DatabaseCreator
 				.getPrepopulatedDBOpenHelper(getActivity()))
 				.getMunicipioCursor());
 		do {
-			municipio_array
-					.add(myCursor.getString(myCursor
-							.getColumnIndex(PrepopulatedDBOpenHelper.MUNICIPIOS_MUNICIPIOS)));
-			uf_array.add(myCursor.getString(myCursor
-					.getColumnIndex(PrepopulatedDBOpenHelper.MUNICIPIOS_UF)));
-			cod_array.add(myCursor.getString(myCursor
-					.getColumnIndex(PrepopulatedDBOpenHelper.MUNICIPIOS_COD)));
+			municipio_array.add(myCursor.getString(myCursor.getColumnIndex(PrepopulatedDBOpenHelper.NOME_DO_MUNICIPIO)));
+			uf_array.add(myCursor.getString(myCursor.getColumnIndex(PrepopulatedDBOpenHelper.MUNICIPIOS_UF)));
+			cod_array.add(myCursor.getString(myCursor.getColumnIndex(PrepopulatedDBOpenHelper.MUNICIPIOS_COD)));
 		} while (myCursor.moveToNext());
-		myCursor.close();
-		adapter_municipio = new ArrayAdapter<String>(getActivity(),
-				R.layout.custom_autocompletar, R.id.autoCompleteItem,
-				municipio_array);
-		auto_autocompletar_municipios.setAdapter(adapter_municipio);
+		    myCursor.close();
+		    adapter_municipio = new ArrayAdapter<String>(getActivity(), R.layout.custom_autocompletar, R.id.autoCompleteItem, municipio_array);
+		    auto_autocompletar_municipios.setAdapter(adapter_municipio);
 
-		auto_autocompletar_municipios
-				.setOnItemClickListener(new OnItemClickListener() {
+		    auto_autocompletar_municipios.setOnItemClickListener(new OnItemClickListener() {
 
 					@Override
 					public void onItemClick(AdapterView<?> parent, View view,
@@ -480,7 +473,7 @@ public class AutoDeInfracaoFragment extends
 						auto_de_uf.setText(data.getUf());
 
 					}
-				});
+			});
 	}
 
 	@Override
@@ -501,7 +494,7 @@ public class AutoDeInfracaoFragment extends
 
 	}
 
-	private void setViewforNovaAuto() {
+	private void setViewNovoAuto() {
 		auto_autocompletar_municipios.setVisibility(AutoCompleteTextView.GONE);
 		et_auto_de_codigo_do_municipio.setVisibility(TextView.GONE);
 		tv_auto_autode_Muni.setVisibility(TextView.GONE);

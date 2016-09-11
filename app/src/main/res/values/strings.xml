@@ -371,9 +371,9 @@
     <string name="opcoes_log">Histórico de Documentos</string>
     <string name="listar_placas">Placas consultadas</string>
     <string name="listar_autos">Autos emitidos</string>
-    <string name="listar_tav">TAV's emitidos</string>
-    <string name="listar_tca">TCA's emitidos</string>
-    <string name="listar_rrd">RRD's emitidos</string>
+    <string name="listar_tav">TAV emitidos</string>
+    <string name="listar_tca">TCA emitidos</string>
+    <string name="listar_rrd">RRD emitidos</string>
 
     <!-- other -->
     <string name="sincronizacao_concluida">Sincronização concluída.</string>

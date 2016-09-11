@@ -432,7 +432,7 @@ public class DadosDoAuto implements Serializable {
 				.getColumnIndex(AutoInfracaoDatabaseHelper.NUMERO_DE_SERIE)));
 
 		this.setMedicao_realizada(myCursor.getString(myCursor
-				.getColumnIndex(AutoInfracaoDatabaseHelper.MEDICO_REALIZADA)));
+				.getColumnIndex(AutoInfracaoDatabaseHelper.MEDICAO_REALIZADA)));
 
 		this.setValor_considerada(myCursor.getString(myCursor
 				.getColumnIndex(AutoInfracaoDatabaseHelper.VALOR_CONSIDERADA)));

@@ -1,13 +1,13 @@
 package net.sistransito.mobile.tav;
 
-public class TAVObgect {
+public class TAVObject {
 	private static TAVData data;
 
-	private TAVObgect() {
+	private TAVObject() {
 		data = new TAVData();
 	}
 
-	public static TAVData getTAVOject() {
+	public static TAVData getTAVObject() {
 
 		if (data == null)
 			data = new TAVData();
@@ -16,6 +16,7 @@ public class TAVObgect {
 	}
 
 	public static void setTAVObject(TAVData tcaData) {
+
 		data = tcaData;
 	}
 }

@@ -100,11 +100,13 @@ public class AutoInfracaoDatabaseAdapter {
 		values.put(AutoInfracaoDatabaseHelper.DATA, data.getData());
 		values.put(AutoInfracaoDatabaseHelper.HORA, data.getHora());
 		values.put(AutoInfracaoDatabaseHelper.DESCRICAO, data.getDescricao());
-		values.put(AutoInfracaoDatabaseHelper.MARCA, data.getMarca());
-		values.put(AutoInfracaoDatabaseHelper.MODELO, data.getModelo());
+		values.put(AutoInfracaoDatabaseHelper.MARCA,
+				data.getMarca());
+		values.put(AutoInfracaoDatabaseHelper.MODELO,
+				data.getModelo());
 		values.put(AutoInfracaoDatabaseHelper.NUMERO_DE_SERIE,
 				data.getNumero_de_serie());
-		values.put(AutoInfracaoDatabaseHelper.MEDICO_REALIZADA,
+		values.put(AutoInfracaoDatabaseHelper.MEDICAO_REALIZADA,
 				data.getMedicao_realizada());
 		values.put(AutoInfracaoDatabaseHelper.VALOR_CONSIDERADA,
 				data.getValor_considerada());
@@ -114,7 +116,8 @@ public class AutoInfracaoDatabaseAdapter {
 				data.getRecolhimento());
 		values.put(AutoInfracaoDatabaseHelper.PROCEDIMENTOS,
 				data.getProcedimentos());
-		values.put(AutoInfracaoDatabaseHelper.OBSERVACAO, data.getObservacao());
+		values.put(AutoInfracaoDatabaseHelper.OBSERVACAO,
+				data.getObservacao());
 		values.put(AutoInfracaoDatabaseHelper.IDENTIFICACAO_EMBARCADOR,
 				data.getIdetificacao_embarcador());
 		values.put(AutoInfracaoDatabaseHelper.CNPJ_CPF_EMBARCADOR,
@@ -123,12 +126,10 @@ public class AutoInfracaoDatabaseAdapter {
 				data.getIdentificacao_do_transportador());
 		values.put(AutoInfracaoDatabaseHelper.CNPJ_CPF_TRANSPORTADOR,
 				data.getCnpj_cpf_transportador());
-
 		values.put(AutoInfracaoDatabaseHelper.NUMERO_AUTO,
 				data.getNumero_auto());
 
-		long insert = this.database.insert(
-				AutoInfracaoDatabaseHelper.TABLE_NAME, null, values);
+		long insert = this.database.insert(AutoInfracaoDatabaseHelper.TABLE_NAME, null, values);
 
 		if (insert > 0) {
 			(DatabaseCreator.getDatabaseAdapterNumero(context))
@@ -237,7 +238,7 @@ public class AutoInfracaoDatabaseAdapter {
 				map.put(AutoInfracaoDatabaseHelper.MODELO, data.getModelo());
 				map.put(AutoInfracaoDatabaseHelper.NUMERO_DE_SERIE,
 						data.getNumero_de_serie());
-				map.put(AutoInfracaoDatabaseHelper.MEDICO_REALIZADA,
+				map.put(AutoInfracaoDatabaseHelper.MEDICAO_REALIZADA,
 						data.getMedicao_realizada());
 				map.put(AutoInfracaoDatabaseHelper.VALOR_CONSIDERADA,
 						data.getValor_considerada());

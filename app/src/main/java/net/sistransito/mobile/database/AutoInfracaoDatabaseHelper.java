@@ -22,9 +22,7 @@ public class AutoInfracaoDatabaseHelper extends SQLiteOpenHelper {
 	public static final String NOME_DO_CONDUCTOR = "condutor";
 	public static final String CNH_PPD = "cnh_pdd";
 	public static final String UF_CNH = "uf_cnh";
-
 	public static final String TIPO_DE_DOCUMENTO = "tipo_de_documento";
-
 	public static final String NUMERO_DOCUMENTO = "numero_documento";
 
 	// infracao
@@ -42,7 +40,7 @@ public class AutoInfracaoDatabaseHelper extends SQLiteOpenHelper {
 	public static final String MARCA = "marca_equipamento";
 	public static final String MODELO = "modelo";
 	public static final String NUMERO_DE_SERIE = "numero_de_serio";
-	public static final String MEDICO_REALIZADA = "medicao_realizada";
+	public static final String MEDICAO_REALIZADA = "medicao_realizada";
 	public static final String VALOR_CONSIDERADA = "valor_considerada";
 	public static final String N_DA_AMOSTRA = "numero_amostra_teste";
 
@@ -72,7 +70,7 @@ public class AutoInfracaoDatabaseHelper extends SQLiteOpenHelper {
 			+ " TEXT, " + UF + " TEXT, " + LOCAL + " TEXT, " + DATA + " TEXT, "
 			+ HORA + " TEXT, " + DESCRICAO + " TEXT, " + MARCA + " TEXT, "
 			+ MODELO + " TEXT, " + NUMERO_DE_SERIE + " TEXT, "
-			+ MEDICO_REALIZADA + " TEXT, " + VALOR_CONSIDERADA + " TEXT, "
+			+ MEDICAO_REALIZADA + " TEXT, " + VALOR_CONSIDERADA + " TEXT, "
 			+ N_DA_AMOSTRA + " TEXT, " + RECOLHIMENTO + " TEXT, "
 			+ PROCEDIMENTOS + " TEXT, " + OBSERVACAO + " TEXT, "
 			+ IDENTIFICACAO_EMBARCADOR + " TEXT, "

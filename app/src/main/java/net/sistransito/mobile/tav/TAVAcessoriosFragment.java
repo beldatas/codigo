@@ -65,7 +65,7 @@ public class TAVAcessoriosFragment extends Fragment implements
 	}
 
 	private void getAutodeObject() {
-		data = TAVObgect.getTAVOject();
+		data = TAVObject.getTAVObject();
 
 	}
 

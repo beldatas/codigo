@@ -47,9 +47,9 @@ public class TAVActivity extends AppCompatActivity implements
 
 	private void getAutodeObject() {
 		Bundle bundleFrom = getIntent().getExtras();
-		TAVObgect.setTAVObject((TAVData) bundleFrom
+		TAVObject.setTAVObject((TAVData) bundleFrom
 				.getSerializable(TAVData.getTavId()));
-		//tavData = TAVObgect.getTAVOject();
+		//tavData = TAVObject.getTAVObject();
 		
 	}
 

@@ -30,7 +30,7 @@ import net.sistrnsitomobile.R;
 import java.util.Arrays;
 import java.util.List;
 
-public class TAVGegrarFragment extends Fragment implements
+public class TAVGerarFragment extends Fragment implements
 		OnClickListener, OnCheckedChangeListener {
 	private View view;
 	private TAVData data;
@@ -50,8 +50,8 @@ public class TAVGegrarFragment extends Fragment implements
 	private AnyArrayAdapter<String> adapter_remocao_atraves_de;
 
 	private LinearLayout linearLayout_parent, linearLayout_child;
-	public static TAVGegrarFragment newInstance() {
-		return new TAVGegrarFragment();
+	public static TAVGerarFragment newInstance() {
+		return new TAVGerarFragment();
 	}
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -108,7 +108,7 @@ public class TAVGegrarFragment extends Fragment implements
 	}
 
 	private void getAutodeObject() {
-		data = TAVObgect.getTAVOject();
+		data = TAVObject.getTAVObject();
 
 	}
 
@@ -166,7 +166,7 @@ public class TAVGegrarFragment extends Fragment implements
 			s += AppConstants.COMMA + cb_tav_cheio.getText();
 		if (s != null) {
 			s = s.substring(AppConstants.COMMA.length());
-			data.setMarcador_de_conbutivel(s);
+			data.setMarcador_de_combustivel(s);
 		}
 
 	}
@@ -258,7 +258,7 @@ public class TAVGegrarFragment extends Fragment implements
 		case R.id.rg_marcador_de_conbutivel_1:
 			rg_marcador_de_conbutivel_2.setOnCheckedChangeListener(null);
 			rg_marcador_de_conbutivel_2.clearCheck();
-			data.setMarcador_de_conbutivel(((RadioButton) (view
+			data.setMarcador_de_combustivel(((RadioButton) (view
 					.findViewById(rg_marcador_de_conbutivel_1
 							.getCheckedRadioButtonId()))).getText().toString());
 			rg_marcador_de_conbutivel_2.setOnCheckedChangeListener(this);
@@ -268,7 +268,7 @@ public class TAVGegrarFragment extends Fragment implements
 		case R.id.rg_marcador_de_conbutivel_2:
 			rg_marcador_de_conbutivel_1.setOnCheckedChangeListener(null);
 			rg_marcador_de_conbutivel_1.clearCheck();
-			data.setMarcador_de_conbutivel(((RadioButton) (view
+			data.setMarcador_de_combustivel(((RadioButton) (view
 					.findViewById(rg_marcador_de_conbutivel_2
 							.getCheckedRadioButtonId()))).getText().toString());
 			rg_marcador_de_conbutivel_1.setOnCheckedChangeListener(this);

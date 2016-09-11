@@ -18,7 +18,6 @@ import java.util.Arrays;
 public class TAVEstruturaFragment extends Fragment implements
 		OnItemSelectedListener {
 	private View view;
-
 	private TAVData data;
 	private FilterName filterName;
 
@@ -42,9 +41,7 @@ public class TAVEstruturaFragment extends Fragment implements
 
 	private void addListener() {
 		cabeca_de_alavanca.setOnItemSelectedListener(this);
-
 		carroceria.setOnItemSelectedListener(this);
-
 		forro.setOnItemSelectedListener(this);
 		lataria_capo.setOnItemSelectedListener(this);
 		lataria_lado_direito.setOnItemSelectedListener(this);
@@ -66,14 +63,13 @@ public class TAVEstruturaFragment extends Fragment implements
 	}
 
 	private void getAutodeObject() {
-		data = TAVObgect.getTAVOject();
+		data = TAVObject.getTAVObject();
 
 	}
 
 	private void initializedView() {
 
-		cabeca_de_alavanca = (Spinner) view
-				.findViewById(R.id.cabeca_de_alavanca);
+		cabeca_de_alavanca = (Spinner) view.findViewById(R.id.cabeca_de_alavanca);
 		carroceria = (Spinner) view.findViewById(R.id.carroceria);
 		forro = (Spinner) view.findViewById(R.id.forro);
 		lataria_capo = (Spinner) view.findViewById(R.id.lataria_capo);
