@@ -19,7 +19,7 @@ public class SaveBitmap {
             this.type = type;
         }
     }
-
+    
     private Context context;
     private String filePath;
 
