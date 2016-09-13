@@ -73,7 +73,7 @@ public class FragmentLogin extends Fragment implements OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_register:
-                anyPageChangeListener.onPageChange(AppConstants.LOING_FRAGMENT_1);
+                anyPageChangeListener.onPageChange(AppConstants.LOGIN_FRAGMENT_1);
                 break;
             case R.id.btn_login:
                 if (checkInput()) {

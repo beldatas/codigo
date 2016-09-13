@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity implements
         adapter = new LoginSectionsPagerAdapter(getSupportFragmentManager());
         pager.setAdapter(adapter);
         pager.setCurrentItem(getIntent().getIntExtra(
-                AppConstants.LOING_FRAGMENT_ID, 0));
+                AppConstants.LOGIN_FRAGMENT_ID, 0));
         try {
             mScroller = ViewPager.class.getDeclaredField("mScroller");
             mScroller.setAccessible(true);

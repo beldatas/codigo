@@ -20,9 +20,9 @@ public class AppConstants {
 	public static final String FONT_3 = "3";
 	public static final String FONT_4 = "4";
 	//
-	public static final String LOING_FRAGMENT_ID = "login_id";
-	public static final int LOING_FRAGMENT_0 = 0;
-	public static final int LOING_FRAGMENT_1 = 1;
+	public static final String LOGIN_FRAGMENT_ID = "login_id";
+	public static final int LONGIN_FRAGMENT_0 = 0;
+	public static final int LOGIN_FRAGMENT_1 = 1;
 
 	//
 	public static final int NUMERO_AUTO = 1;

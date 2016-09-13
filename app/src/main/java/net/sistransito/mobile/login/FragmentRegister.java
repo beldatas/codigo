@@ -93,7 +93,7 @@ public class FragmentRegister extends Fragment implements
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_login:
-                anyPageChangeListener.onPageChange(AppConstants.LOING_FRAGMENT_0);
+                anyPageChangeListener.onPageChange(AppConstants.LONGIN_FRAGMENT_0);
                 break;
             case R.id.btn_sign_up:
                 if (NetworkConnection.isNetworkAvailable(getActivity())) {

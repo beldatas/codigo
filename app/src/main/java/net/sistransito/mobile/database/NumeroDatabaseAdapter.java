@@ -12,12 +12,12 @@ import java.util.ArrayList;
 public class NumeroDatabaseAdapter {
 	private TimeAndIme ime;
 	private SQLiteDatabase database;
-	private NumeroDatabseHelper databaseHelper;
+	private NumeroDatabaseHelper databaseHelper;
 	private final int CHECK_NUM_SIZE = 10;
 
 	public NumeroDatabaseAdapter(Context context) {
 		ime = new TimeAndIme(context);
-		databaseHelper = new NumeroDatabseHelper(context);
+		databaseHelper = new NumeroDatabaseHelper(context);
 		database = databaseHelper.getWritableDatabase(ime.getIME());
 	}
 
@@ -32,26 +32,26 @@ public class NumeroDatabaseAdapter {
 
 	public boolean deleteAuotNumero(String data) {
 
-		return deleteData(NumeroDatabseHelper.TABLE_NAME_NUMERO_AUTO,
-				NumeroDatabseHelper.NUMERO_AUTO, data);
+		return deleteData(NumeroDatabaseHelper.TABLE_NAME_NUMERO_AUTO,
+				NumeroDatabaseHelper.NUMERO_AUTO, data);
 	}
 
 	public boolean deleteTcaNumero(String data) {
 
-		return deleteData(NumeroDatabseHelper.TABLE_NAME_NUMERO_TCA,
-				NumeroDatabseHelper.NUMERO_TCA, data);
+		return deleteData(NumeroDatabaseHelper.TABLE_NAME_NUMERO_TCA,
+				NumeroDatabaseHelper.NUMERO_TCA, data);
 	}
 
 	public boolean deleteTavNumero(String data) {
 
-		return deleteData(NumeroDatabseHelper.TABLE_NAME_NUMERO_TAV,
-				NumeroDatabseHelper.NUMERO_TAV, data);
+		return deleteData(NumeroDatabaseHelper.TABLE_NAME_NUMERO_TAV,
+				NumeroDatabaseHelper.NUMERO_TAV, data);
 	}
 
 	public boolean deleteRrdNumero(String data) {
 
-		return deleteData(NumeroDatabseHelper.TABLE_NAME_NUMERO_RRD,
-				NumeroDatabseHelper.NUMERO_RRD, data);
+		return deleteData(NumeroDatabaseHelper.TABLE_NAME_NUMERO_RRD,
+				NumeroDatabaseHelper.NUMERO_RRD, data);
 	}
 
 	private String getNumero(String table_name, String filed_name) {
@@ -71,26 +71,26 @@ public class NumeroDatabaseAdapter {
 	}
 
 	public String getAutoNumero() {
-		return getNumero(NumeroDatabseHelper.TABLE_NAME_NUMERO_AUTO,
-				NumeroDatabseHelper.NUMERO_AUTO);
+		return getNumero(NumeroDatabaseHelper.TABLE_NAME_NUMERO_AUTO,
+				NumeroDatabaseHelper.NUMERO_AUTO);
 	}
 
 	public String geTavNumero() {
 
-		return getNumero(NumeroDatabseHelper.TABLE_NAME_NUMERO_TAV,
-				NumeroDatabseHelper.NUMERO_TAV);
+		return getNumero(NumeroDatabaseHelper.TABLE_NAME_NUMERO_TAV,
+				NumeroDatabaseHelper.NUMERO_TAV);
 	}
 
 	public String getTcaNumero() {
 
-		return getNumero(NumeroDatabseHelper.TABLE_NAME_NUMERO_TCA,
-				NumeroDatabseHelper.NUMERO_TCA);
+		return getNumero(NumeroDatabaseHelper.TABLE_NAME_NUMERO_TCA,
+				NumeroDatabaseHelper.NUMERO_TCA);
 	}
 
 	public String getRrdNumero() {
 
-		return getNumero(NumeroDatabseHelper.TABLE_NAME_NUMERO_RRD,
-				NumeroDatabseHelper.NUMERO_RRD);
+		return getNumero(NumeroDatabaseHelper.TABLE_NAME_NUMERO_RRD,
+				NumeroDatabaseHelper.NUMERO_RRD);
 	}
 
 	private boolean updateTable(String tableName, String clume_name,
@@ -109,26 +109,26 @@ public class NumeroDatabaseAdapter {
 
 	public boolean setAutoNumero(ArrayList<String> list) {
 
-		return updateTable(NumeroDatabseHelper.TABLE_NAME_NUMERO_AUTO,
-				NumeroDatabseHelper.NUMERO_AUTO, list);
+		return updateTable(NumeroDatabaseHelper.TABLE_NAME_NUMERO_AUTO,
+				NumeroDatabaseHelper.NUMERO_AUTO, list);
 	}
 
 	public boolean setTavNumero(ArrayList<String> list) {
 
-		return updateTable(NumeroDatabseHelper.TABLE_NAME_NUMERO_TAV,
-				NumeroDatabseHelper.NUMERO_TAV, list);
+		return updateTable(NumeroDatabaseHelper.TABLE_NAME_NUMERO_TAV,
+				NumeroDatabaseHelper.NUMERO_TAV, list);
 	}
 
 	public boolean setTcaNumero(ArrayList<String> list) {
 
-		return updateTable(NumeroDatabseHelper.TABLE_NAME_NUMERO_TCA,
-				NumeroDatabseHelper.NUMERO_TCA, list);
+		return updateTable(NumeroDatabaseHelper.TABLE_NAME_NUMERO_TCA,
+				NumeroDatabaseHelper.NUMERO_TCA, list);
 	}
 
 	public boolean setRrdNumero(ArrayList<String> list) {
 
-		return updateTable(NumeroDatabseHelper.TABLE_NAME_NUMERO_RRD,
-				NumeroDatabseHelper.NUMERO_RRD, list);
+		return updateTable(NumeroDatabaseHelper.TABLE_NAME_NUMERO_RRD,
+				NumeroDatabaseHelper.NUMERO_RRD, list);
 	}
 
 	private boolean getcheck(String table_name) {
@@ -144,38 +144,38 @@ public class NumeroDatabaseAdapter {
 	}
 
 	public boolean isNeedAutodeUpdate() {
-		return getcheck(NumeroDatabseHelper.TABLE_NAME_NUMERO_AUTO);
+		return getcheck(NumeroDatabaseHelper.TABLE_NAME_NUMERO_AUTO);
 	}
 
 	public boolean isNeedTavUpdate() {
-		return getcheck(NumeroDatabseHelper.TABLE_NAME_NUMERO_TAV);
+		return getcheck(NumeroDatabaseHelper.TABLE_NAME_NUMERO_TAV);
 	}
 
 	public boolean isNeedTcaUpdate() {
-		return getcheck(NumeroDatabseHelper.TABLE_NAME_NUMERO_TCA);
+		return getcheck(NumeroDatabaseHelper.TABLE_NAME_NUMERO_TCA);
 	}
 
 	public boolean isNeedRrdUpdate() {
-		return getcheck(NumeroDatabseHelper.TABLE_NAME_NUMERO_RRD);
+		return getcheck(NumeroDatabaseHelper.TABLE_NAME_NUMERO_RRD);
 	}
 
 	public int getRemainNumberRRD() {
-		return getNumber(NumeroDatabseHelper.TABLE_NAME_NUMERO_RRD);
+		return getNumber(NumeroDatabaseHelper.TABLE_NAME_NUMERO_RRD);
 
 	}
 
 	public int getRemainNumberAUTO() {
-		return getNumber(NumeroDatabseHelper.TABLE_NAME_NUMERO_AUTO);
+		return getNumber(NumeroDatabaseHelper.TABLE_NAME_NUMERO_AUTO);
 
 	}
 
 	public int getRemainNumberTCA() {
-		return getNumber(NumeroDatabseHelper.TABLE_NAME_NUMERO_TCA);
+		return getNumber(NumeroDatabaseHelper.TABLE_NAME_NUMERO_TCA);
 
 	}
 
 	public int getRemainNumberTAV() {
-		return getNumber(NumeroDatabseHelper.TABLE_NAME_NUMERO_TAV);
+		return getNumber(NumeroDatabaseHelper.TABLE_NAME_NUMERO_TAV);
 
 	}
 

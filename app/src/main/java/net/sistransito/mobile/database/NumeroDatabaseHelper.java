@@ -4,16 +4,16 @@ import net.sqlcipher.database.SQLiteDatabase;
 import net.sqlcipher.database.SQLiteOpenHelper;
 import android.content.Context;
 
-public class NumeroDatabseHelper extends SQLiteOpenHelper {
+public class NumeroDatabaseHelper extends SQLiteOpenHelper {
 
-	public NumeroDatabseHelper(Context context) {
+	public NumeroDatabaseHelper(Context context) {
 		super(context, DATABASE_NAME_USUARIO, null, DatabaseCreator.VERSION);
 	}
 
 	// DATABASE NAME
 	public static final String DATABASE_NAME_USUARIO = "database_numero.db";
 	// ID FILED
-	public static final String COLUME_ID = "_id";
+	public static final String COLUNM_ID = "_id";
 	// TABLE NAME
 	public static final String TABLE_NAME_NUMERO_AUTO = "tb_numero_auto";
 	public static final String TABLE_NAME_NUMERO_TAV = "tb_numero_tav";
@@ -28,17 +28,17 @@ public class NumeroDatabseHelper extends SQLiteOpenHelper {
 	
 
 	public static final String TABLE_SQl_AUTO = "CREATE TABLE "
-			+ TABLE_NAME_NUMERO_AUTO + " (" + COLUME_ID
+			+ TABLE_NAME_NUMERO_AUTO + " (" + COLUNM_ID
 			+ " INTEGER PRIMARY KEY AUTOINCREMENT, " + NUMERO_AUTO  + " TEXT )";
 
 	public static final String TABLE_SQl_TAV = "CREATE TABLE "
-			+ TABLE_NAME_NUMERO_TAV + " (" + COLUME_ID
+			+ TABLE_NAME_NUMERO_TAV + " (" + COLUNM_ID
 			+ " INTEGER PRIMARY KEY AUTOINCREMENT, " + NUMERO_TAV + " TEXT )";
 	public static final String TABLE_SQl_TCA = "CREATE TABLE "
-			+ TABLE_NAME_NUMERO_TCA + " (" + COLUME_ID
+			+ TABLE_NAME_NUMERO_TCA + " (" + COLUNM_ID
 			+ " INTEGER PRIMARY KEY AUTOINCREMENT, " + NUMERO_TCA +  " TEXT )";
 	public static final String TABLE_SQl_RRD = "CREATE TABLE "
-			+ TABLE_NAME_NUMERO_RRD + " (" + COLUME_ID
+			+ TABLE_NAME_NUMERO_RRD + " (" + COLUNM_ID
 			+ " INTEGER PRIMARY KEY AUTOINCREMENT, " + NUMERO_RRD + " TEXT )";
 
 	@Override

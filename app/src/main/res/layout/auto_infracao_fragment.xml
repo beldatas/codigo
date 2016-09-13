@@ -34,7 +34,7 @@
                 android:textColor="@color/whight" />
 
             <AutoCompleteTextView
-                android:id="@+id/autode_autocomplete_infracao"
+                android:id="@+id/tv_autocomplete_infracao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/yellow_light"
@@ -132,7 +132,7 @@
                     android:textColor="@color/whight" />
 
                 <EditText
-                    android:id="@+id/et_autode_art"
+                    android:id="@+id/et_autode_amparo_legal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/yellow_light"

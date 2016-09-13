@@ -56,7 +56,8 @@ public class CnhFormat {
 					}
 
 				} else if (success != 1) {
-					result_final = "Nenhum dado retornado";
+					result_final = context.getResources().getString(
+							R.string.nehum_resultado_retornado);
 					warrningStatus = false;
 				}
 

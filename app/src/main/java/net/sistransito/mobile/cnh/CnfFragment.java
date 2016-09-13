@@ -27,7 +27,7 @@ public class CnfFragment extends Fragment implements
 	private TextView tv_apresentar_resultado;
 	private EditText et_input;
 	private InputMethodManager imm;
-	private final String CNH_URL = "http://sistransito.net/movel/dosis.pl?op=cnh&dadoscnh=";
+	private final String CNH_URL = "http://sistransito..com.br/movel/dosis.pl?op=cnh&dadoscnh=";
 
 
 	public static CnfFragment newInstance() {
