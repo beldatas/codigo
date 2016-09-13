@@ -14,7 +14,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import net.sistransito.mobile.adapter.AnyArrayAdapter;
 import net.sistransito.mobile.appconstantes.AppConstants;
@@ -31,19 +30,19 @@ import java.util.List;
 public class DadosDoCondutorFragment extends Fragment implements
 		AnyDialogListener {
 	private View view;
-	private EditText et_auto_placa, et_auto_modelo_veiculo,
-			et_nome_do_condutor, et_auto_cnh_ppd, et_uf_cnh,
-			et_auto_cor_do_veiculo, et_autode_chassi, et_numero_documento;
-	private Spinner auto_spinner_especie, auto_spinner_categoria,
-			autode_spinner_pais;
-	private List<String> list_categoria, list_especie, list_pais;
-	private AnyArrayAdapter<String> adapter_categoria, adapter_especie,
-			adapter_pais;
+	private EditText editPlacaVeiculo, editModeloVeiculo,
+			editNomeCondutor, editCnhPpdAcc, editUfRegistro,
+			editCorVeiculo, editChassiVeiculo, editNumeroDocumento;
+	private Spinner spinnerEspecie, spinnerCategoria,
+			spinnerPais;
+	private List<String> listCategoria, listEspecie, listPais;
+	private AnyArrayAdapter<String> adapterCategoria, adapterEspecie,
+			adapterPais;
 	private DadosDoAuto data;
 	private Bundle bundle;
 	private AnyDiaglogFragmentForFragment diaglogFragmentForFragment;
 
-	private RadioGroup rg_tipo_de_documento;
+	private RadioGroup radioTipoDocumento;
 
 	public static DadosDoCondutorFragment newInstance() {
 		return new DadosDoCondutorFragment();
@@ -80,24 +79,24 @@ public class DadosDoCondutorFragment extends Fragment implements
 	}
 
 	private void addListener() {
-		et_nome_do_condutor.addTextChangedListener(new ChangeText(
-				R.id.et_nome_do_condutor));
+		editNomeCondutor.addTextChangedListener(new ChangeText(
+				R.id.editNomeCondutor));
 
-		et_auto_cnh_ppd.addTextChangedListener(new ChangeText(
-				R.id.et_autode_cnh_ppd));
+		editCnhPpdAcc.addTextChangedListener(new ChangeText(
+				R.id.editCnhPpdAcc));
 
-		et_uf_cnh.addTextChangedListener(new ChangeText(R.id.et_uf_cnh));
-		et_autode_chassi.addTextChangedListener(new ChangeText(
-				R.id.et_autode_chassi));
-		et_numero_documento.addTextChangedListener(new ChangeText(
-				R.id.et_numero_documento));
+		editUfRegistro.addTextChangedListener(new ChangeText(R.id.editUfRegistro));
+		editChassiVeiculo.addTextChangedListener(new ChangeText(
+				R.id.editChassiVeiculo));
+		editNumeroDocumento.addTextChangedListener(new ChangeText(
+				R.id.editNumeroDocumento));
 
-		autode_spinner_pais
+		spinnerPais
 				.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 					@Override
 					public void onItemSelected(AdapterView<?> parent,
-							View view, int pos, long Id) {
+											   View view, int pos, long Id) {
 
 						data.setPais((String) parent.getItemAtPosition(pos));
 
@@ -108,12 +107,12 @@ public class DadosDoCondutorFragment extends Fragment implements
 					}
 				});
 
-		auto_spinner_categoria
+		spinnerCategoria
 				.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 					@Override
 					public void onItemSelected(AdapterView<?> parent,
-							View view, int pos, long Id) {
+											   View view, int pos, long Id) {
 
 						data.setCategoria((String) parent
 								.getItemAtPosition(pos));
@@ -124,11 +123,11 @@ public class DadosDoCondutorFragment extends Fragment implements
 					public void onNothingSelected(AdapterView<?> arg0) {
 					}
 				});
-		auto_spinner_especie
+		spinnerEspecie
 				.setOnItemSelectedListener(new OnItemSelectedListener() {
 					@Override
 					public void onItemSelected(AdapterView<?> parent,
-							View view, int pos, long Id) {
+											   View view, int pos, long Id) {
 						data.setEspecie((String) parent.getItemAtPosition(pos));
 					}
 
@@ -137,14 +136,14 @@ public class DadosDoCondutorFragment extends Fragment implements
 					}
 				});
 
-		rg_tipo_de_documento
+		radioTipoDocumento
 				.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 					@Override
 					public void onCheckedChanged(RadioGroup arg0, int check_id) {
 						if (check_id != -1) {
 							String value = ((RadioButton) view
-									.findViewById(rg_tipo_de_documento
+									.findViewById(radioTipoDocumento
 											.getCheckedRadioButtonId()))
 									.getText().toString();
 							value = value.trim();
@@ -176,78 +175,78 @@ public class DadosDoCondutorFragment extends Fragment implements
 	}
 
 	private void initializedView() {
-		et_auto_placa = (EditText) view.findViewById(R.id.et_autode_placa);
+		editPlacaVeiculo = (EditText) view.findViewById(R.id.editPlacaVeiculo);
 
-		et_autode_chassi = (EditText) view.findViewById(R.id.et_autode_chassi);
-		et_auto_modelo_veiculo = (EditText) view
-				.findViewById(R.id.et_autode_model);
-		et_auto_cor_do_veiculo = (EditText) view
-				.findViewById(R.id.et_autode_cor_do_veiculo);
+		editChassiVeiculo = (EditText) view.findViewById(R.id.editChassiVeiculo);
+		editModeloVeiculo = (EditText) view
+				.findViewById(R.id.editModeloVeiculo);
+		editCorVeiculo = (EditText) view
+				.findViewById(R.id.editCorVeiculo);
 
-		et_nome_do_condutor = (EditText) view
-				.findViewById(R.id.et_nome_do_condutor);
+		editNomeCondutor = (EditText) view
+				.findViewById(R.id.editNomeCondutor);
 
-		et_auto_cnh_ppd = (EditText) view.findViewById(R.id.et_autode_cnh_ppd);
-		et_uf_cnh = (EditText) view.findViewById(R.id.et_uf_cnh);
+		editCnhPpdAcc = (EditText) view.findViewById(R.id.editCnhPpdAcc);
+		editUfRegistro = (EditText) view.findViewById(R.id.editUfRegistro);
 
-		list_categoria = Arrays.asList(getResources().getStringArray(
-				R.array.autode_categoria));
+		listCategoria = Arrays.asList(getResources().getStringArray(
+				R.array.listCategoria));
 
-		list_pais = Arrays.asList(getResources().getStringArray(
+		listPais = Arrays.asList(getResources().getStringArray(
 				R.array.filter_nome_pais));
 
-		adapter_pais = new AnyArrayAdapter<String>(getActivity(),
+		adapterPais = new AnyArrayAdapter<String>(getActivity(),
 				android.R.layout.simple_spinner_item, android.R.id.text1,
-				list_pais);
+				listPais);
 
-		adapter_categoria = new AnyArrayAdapter<String>(getActivity(),
+		adapterCategoria = new AnyArrayAdapter<String>(getActivity(),
 				android.R.layout.simple_spinner_item, android.R.id.text1,
-				list_categoria);
-		list_especie = Arrays.asList(getResources().getStringArray(
+				listCategoria);
+		listEspecie = Arrays.asList(getResources().getStringArray(
 				R.array.autode_especie));
-		adapter_especie = new AnyArrayAdapter<String>(getActivity(),
+		adapterEspecie = new AnyArrayAdapter<String>(getActivity(),
 				android.R.layout.simple_spinner_item, android.R.id.text1,
-				list_especie);
+				listEspecie);
 
-		auto_spinner_especie = (Spinner) view.findViewById(R.id.autode_spinner_especie);
-		auto_spinner_especie.setAdapter(adapter_especie);
+		spinnerEspecie = (Spinner) view.findViewById(R.id.autode_spinner_especie);
+		spinnerEspecie.setAdapter(adapterEspecie);
 
-		autode_spinner_pais = (Spinner) view.findViewById(R.id.autode_spinner_pais);
-		autode_spinner_pais.setAdapter(adapter_pais);
+		spinnerPais = (Spinner) view.findViewById(R.id.autode_spinner_pais);
+		spinnerPais.setAdapter(adapterPais);
 
-		auto_spinner_categoria = (Spinner) view.findViewById(R.id.autode_spinner_categoria);
-		auto_spinner_categoria.setAdapter(adapter_categoria);
+		spinnerCategoria = (Spinner) view.findViewById(R.id.autode_spinner_categoria);
+		spinnerCategoria.setAdapter(adapterCategoria);
 
-		rg_tipo_de_documento = (RadioGroup) view
+		radioTipoDocumento = (RadioGroup) view
 				.findViewById(R.id.rg_tipo_de_documento);
 
-		et_numero_documento = (EditText) view
-				.findViewById(R.id.et_numero_documento);
+		editNumeroDocumento = (EditText) view
+				.findViewById(R.id.editNumeroDocumento);
 
 	}
 
 	private void getRecomandedUpdate() {
-		et_auto_placa.setText(data.getPlate());
-		et_auto_modelo_veiculo.setText(data.getModel());
-		et_auto_cor_do_veiculo.setText(data.getCor_do_veiculo());
+		editPlacaVeiculo.setText(data.getPlate());
+		editModeloVeiculo.setText(data.getModel());
+		editCorVeiculo.setText(data.getCor_do_veiculo());
 	}
 
 	private void getOtherUpdate() {
 
-		et_autode_chassi.setText(data.getChassi());
+		editChassiVeiculo.setText(data.getChassi());
 		int selection_1 = 0, selection_2 = 0, selection_3 = 0;
-		selection_1 = list_categoria.indexOf(data.getCategoria());
-		selection_2 = list_especie.indexOf(data.getEspecie());
+		selection_1 = listCategoria.indexOf(data.getCategoria());
+		selection_2 = listEspecie.indexOf(data.getEspecie());
 
-		selection_3 = list_pais.indexOf(data.getPais());
+		selection_3 = listPais.indexOf(data.getPais());
 
-		autode_spinner_pais.setSelection(selection_3);
-		auto_spinner_categoria.setSelection(selection_1);
-		auto_spinner_especie.setSelection(selection_2);
-		et_auto_cnh_ppd.setText(data.getCnh_ppd());
-		et_uf_cnh.setText(data.getUf_cnh());
-		et_nome_do_condutor.setText(data.getNome_do_Condutor());
-		et_numero_documento.setText(data.getNumero_documento());
+		spinnerPais.setSelection(selection_3);
+		spinnerCategoria.setSelection(selection_1);
+		spinnerEspecie.setSelection(selection_2);
+		editCnhPpdAcc.setText(data.getCnh_ppd());
+		editUfRegistro.setText(data.getUf_cnh());
+		editNomeCondutor.setText(data.getNome_do_Condutor());
+		editNumeroDocumento.setText(data.getNumero_documento());
 	}
 
 	private class ChangeText implements TextWatcher {
@@ -262,31 +261,31 @@ public class DadosDoCondutorFragment extends Fragment implements
 
 			if (s.toString() != null) {
 				switch (id) {
-				case R.id.et_nome_do_condutor:
+				case R.id.editNomeCondutor:
 					data.setNome_do_Condutor(s.toString());
 					break;
-				case R.id.et_autode_cnh_ppd:
+				case R.id.editCnhPpdAcc:
 					data.setCnh_ppd(s.toString());
 					break;
-				case R.id.et_uf_cnh:
+				case R.id.editUfRegistro:
 					data.setUf_cnh(s.toString());
 					break;
 
-				case R.id.et_autode_chassi:
+				case R.id.editChassiVeiculo:
 					data.setChassi(s.toString());
 					break;
 
-				case R.id.et_numero_documento:
+				case R.id.editNumeroDocumento:
 					data.setNumero_documento(s.toString());
 					break;
 
-				case R.id.et_autode_placa:
+				case R.id.editPlacaVeiculo:
 					data.setPlate(s.toString());
 					break;
-				case R.id.et_autode_cor_do_veiculo:
+				case R.id.editCorVeiculo:
 					data.setCor_do_veiculo(s.toString());
 					break;
-				case R.id.et_autode_model:
+				case R.id.editModeloVeiculo:
 					data.setModel(s.toString());
 					break;
 				}
@@ -326,15 +325,15 @@ public class DadosDoCondutorFragment extends Fragment implements
 	}
 
 	private void setViewEnable(boolean isEnable) {
-		et_auto_placa.setEnabled(isEnable);
-		et_auto_cor_do_veiculo.setEnabled(isEnable);
-		et_auto_modelo_veiculo.setEnabled(isEnable);
+		editPlacaVeiculo.setEnabled(isEnable);
+		editCorVeiculo.setEnabled(isEnable);
+		editModeloVeiculo.setEnabled(isEnable);
 
 		if(isEnable){
 
-			et_auto_placa.addTextChangedListener(new ChangeText(R.id.et_autode_placa));
-			et_auto_cor_do_veiculo.addTextChangedListener(new ChangeText(R.id.et_autode_cor_do_veiculo));
-			et_auto_modelo_veiculo.addTextChangedListener(new ChangeText(R.id.et_autode_model));
+			editPlacaVeiculo.addTextChangedListener(new ChangeText(R.id.editPlacaVeiculo));
+			editCorVeiculo.addTextChangedListener(new ChangeText(R.id.editCorVeiculo));
+			editModeloVeiculo.addTextChangedListener(new ChangeText(R.id.editModeloVeiculo));
 		}
 
 	}

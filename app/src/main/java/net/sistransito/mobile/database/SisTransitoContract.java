@@ -2,9 +2,9 @@ package net.sistransito.mobile.database;
 
 import android.provider.BaseColumns;
 
-public final class SisTransitoContract {
+public final class SistransitoContract {
 
-	public SisTransitoContract() {
+	public SistransitoContract() {
 		// TODO Auto-generated constructor stub
 	}
 	

@@ -44,8 +44,8 @@ public class AutoDeInfracaoFragment extends
 	// Button btn_autode_date_picker and btn_autode_time_picker
 	
 	private View view;
-	private AutoCompleteTextView auto_autocompletar_infracao,
-			auto_autocompletar_municipios;
+	private AutoCompleteTextView autoCompleteInfracao,
+			autoCompleteMunicipios;
 	private DadosDoAuto data;
 	private EditText et_auto_enquadra, et_auto_desdob, et_auto_art,
 			et_auto_de_codigo_do_municipio, auto_de_uf, et_auto_local,
@@ -80,14 +80,14 @@ public class AutoDeInfracaoFragment extends
 	}
 
 	private void initializedView() {
-		auto_autocompletar_infracao = (AutoCompleteTextView) view.findViewById(R.id.autode_autocomplete_infracao);
+		autoCompleteInfracao = (AutoCompleteTextView) view.findViewById(R.id.tv_autocomplete_infracao);
 		et_auto_enquadra = (EditText) view.findViewById(R.id.et_autode_enquadra);
 		et_auto_desdob = (EditText) view.findViewById(R.id.et_autode_desdob);
-		et_auto_art = (EditText) view.findViewById(R.id.et_autode_art);
+		et_auto_art = (EditText) view.findViewById(R.id.et_autode_amparo_legal);
 
 		tv_auto_autode_Muni = (TextView) view
 				.findViewById(R.id.tv_auto_autode_Muni);
-		auto_autocompletar_municipios = (AutoCompleteTextView) view
+		autoCompleteMunicipios = (AutoCompleteTextView) view
 				.findViewById(R.id.auto_autode_Muni);
 
 		tv_autode_de_codigo_do_municipio = (TextView) view
@@ -142,6 +142,7 @@ public class AutoDeInfracaoFragment extends
 				.getPrepopulatedDBOpenHelper(getActivity()))
 				.getAutoEquipamentoEntryCoursor());
 		cursor.moveToFirst();
+
 		for (int i = 0; i < cursor.getCount(); i++) {
 
 			list_descricao
@@ -175,13 +176,11 @@ public class AutoDeInfracaoFragment extends
 				.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 					@Override
-					public void onItemSelected(AdapterView<?> parent,
-							View arg1, int pos, long arg3) {
-						Log.d("dddddddddddddddd", "cccccccccl");
+					public void onItemSelected(AdapterView<?> parent, View arg1, int pos, long arg3) {
+						Log.d("descricao", "ok");
 						data.setDescricao((String) parent
 								.getItemAtPosition(pos));
-						int realpositon = list_descricao.indexOf(data
-								.getDescricao());
+						int realpositon = list_descricao.indexOf(data.getDescricao());
 
 						data.setMarca(list_marca.get(realpositon));
 						data.setModelo(list_modelo.get(realpositon));
@@ -238,13 +237,13 @@ public class AutoDeInfracaoFragment extends
 				R.layout.custom_autocompletar, R.id.autoCompleteItem,
 				auto_infracao);
 
-		auto_autocompletar_infracao.setAdapter(adapter_infracao);
-		auto_autocompletar_infracao
+		autoCompleteInfracao.setAdapter(adapter_infracao);
+		autoCompleteInfracao
 				.setOnItemClickListener(new OnItemClickListener() {
 
 					@Override
 					public void onItemClick(AdapterView<?> parent, View view,
-							int pos, long id) {
+											int pos, long id) {
 
 						data.setInfracao((String) parent.getItemAtPosition(pos));
 						int real_position = auto_infracao.indexOf(data
@@ -375,23 +374,23 @@ public class AutoDeInfracaoFragment extends
 		private boolean checkNumberMedicaoNumber(String s) {
 
 			try {
-				double MEDICAO_CONSIDERADA = 0.00;
-				double MEDICAO_REALIZADA = Double.valueOf(s);
+				double medicaoConsiderada = 0.00;
+				double medicaoRealizada = Double.valueOf(s);
 
-				if (MEDICAO_REALIZADA < 0.05) {
-					MEDICAO_CONSIDERADA = 0.00;
-				} else if (MEDICAO_REALIZADA >= 0.05
-						&& MEDICAO_REALIZADA <= 0.40) {
-					MEDICAO_CONSIDERADA = MEDICAO_REALIZADA - 0.032;
-				} else if (MEDICAO_REALIZADA > 0.40 && MEDICAO_REALIZADA <= 2) {
-					MEDICAO_CONSIDERADA = MEDICAO_REALIZADA - (MEDICAO_REALIZADA * 8) / 100;
+				if (medicaoRealizada < 0.05) {
+					medicaoRealizada = 0.00;
+				} else if (medicaoRealizada >= 0.05
+						&& medicaoRealizada <= 0.40) {
+					medicaoConsiderada = medicaoRealizada - 0.032;
+				} else if (medicaoRealizada > 0.40 && medicaoRealizada <= 2) {
+					medicaoConsiderada = medicaoRealizada - (medicaoRealizada * 8) / 100;
 				} else {
-					MEDICAO_CONSIDERADA = MEDICAO_REALIZADA - (MEDICAO_REALIZADA * 30) / 100;
+					medicaoConsiderada = medicaoRealizada - (medicaoRealizada * 30) / 100;
 				}
 
 				DecimalFormat df = new DecimalFormat("#.##");
-				MEDICAO_CONSIDERADA = Double.valueOf(df.format(MEDICAO_CONSIDERADA));
-				et_auto_valor.setText(String.valueOf(MEDICAO_CONSIDERADA));
+				medicaoConsiderada = Double.valueOf(df.format(medicaoConsiderada));
+				et_auto_valor.setText(String.valueOf(medicaoConsiderada));
 
 				return true;
 
@@ -454,25 +453,25 @@ public class AutoDeInfracaoFragment extends
 		} while (myCursor.moveToNext());
 		    myCursor.close();
 		    adapter_municipio = new ArrayAdapter<String>(getActivity(), R.layout.custom_autocompletar, R.id.autoCompleteItem, municipio_array);
-		    auto_autocompletar_municipios.setAdapter(adapter_municipio);
+		    autoCompleteMunicipios.setAdapter(adapter_municipio);
 
-		    auto_autocompletar_municipios.setOnItemClickListener(new OnItemClickListener() {
+		    autoCompleteMunicipios.setOnItemClickListener(new OnItemClickListener() {
 
-					@Override
-					public void onItemClick(AdapterView<?> parent, View view,
-							int pos, long arg3) {
-						data.setMunicipio((String) parent
-								.getItemAtPosition(pos));
-						int real_position = municipio_array
-								.indexOf((String) parent.getItemAtPosition(pos));
-						data.setCodigo_do_municipio(cod_array
-								.get(real_position));
-						et_auto_de_codigo_do_municipio.setText(data
-								.getCodigo_do_municipio());
-						data.setUf(uf_array.get(real_position));
-						auto_de_uf.setText(data.getUf());
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view,
+										int pos, long arg3) {
+					data.setMunicipio((String) parent
+							.getItemAtPosition(pos));
+					int real_position = municipio_array
+							.indexOf((String) parent.getItemAtPosition(pos));
+					data.setCodigo_do_municipio(cod_array
+							.get(real_position));
+					et_auto_de_codigo_do_municipio.setText(data
+							.getCodigo_do_municipio());
+					data.setUf(uf_array.get(real_position));
+					auto_de_uf.setText(data.getUf());
 
-					}
+				}
 			});
 	}
 
@@ -495,7 +494,7 @@ public class AutoDeInfracaoFragment extends
 	}
 
 	private void setViewNovoAuto() {
-		auto_autocompletar_municipios.setVisibility(AutoCompleteTextView.GONE);
+		autoCompleteMunicipios.setVisibility(AutoCompleteTextView.GONE);
 		et_auto_de_codigo_do_municipio.setVisibility(TextView.GONE);
 		tv_auto_autode_Muni.setVisibility(TextView.GONE);
 		tv_autode_de_codigo_do_municipio.setVisibility(TextView.GONE);

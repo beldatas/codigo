@@ -42,7 +42,7 @@
 
                 <EditText
                     android:editable="false"
-                    android:id="@+id/et_autode_placa"
+                    android:id="@+id/editPlacaVeiculo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/yellow_light"
@@ -89,7 +89,7 @@
 
                 <EditText
                     android:editable="false"
-                    android:id="@+id/et_autode_model"
+                    android:id="@+id/editModeloVeiculo"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/yellow_light"
@@ -108,7 +108,7 @@
             android:textColor="@color/whight" />
 
         <EditText
-            android:id="@+id/et_autode_chassi"
+            android:id="@+id/editChassiVeiculo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/yellow_light"
@@ -128,7 +128,7 @@
 
         <EditText
             android:editable="false"
-            android:id="@+id/et_autode_cor_do_veiculo"
+            android:id="@+id/editCorVeiculo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/yellow_light"
@@ -181,7 +181,7 @@
             android:textColor="@color/whight" />
 
         <EditText
-            android:id="@+id/et_nome_do_condutor"
+            android:id="@+id/editNomeCondutor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/yellow_light"
@@ -213,7 +213,7 @@
                     android:textColor="@color/whight" />
 
                 <EditText
-                    android:id="@+id/et_autode_cnh_ppd"
+                    android:id="@+id/editCnhPpdAcc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/yellow_light"
@@ -241,7 +241,7 @@
                     android:textColor="@color/whight" />
 
                 <EditText
-                    android:id="@+id/et_uf_cnh"
+                    android:id="@+id/editUfRegistro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/yellow_light"
@@ -298,7 +298,7 @@
             </RadioGroup>
 
             <EditText
-                android:id="@+id/et_numero_documento"
+                android:id="@+id/editNumeroDocumento"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/yellow_light"
