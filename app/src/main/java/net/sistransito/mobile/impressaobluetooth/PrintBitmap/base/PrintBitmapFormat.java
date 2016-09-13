@@ -337,5 +337,4 @@ public class PrintBitmapFormat extends BasePaint {
         }
         if (isLineAdd) y_position += MARGIN_SMALL;
     }
-
 }

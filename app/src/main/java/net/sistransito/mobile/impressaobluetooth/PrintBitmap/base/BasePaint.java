@@ -14,12 +14,10 @@ import java.io.InputStream;
 
 public class BasePaint {
 
-    private static final String SPACE = " ";
     public final int PAGE_WIDTH = 576, PAGE_HEIGHT = 3200;
     public final int MARGIN_SMALL = 5;
     public final int MARGIN_LARGE = 10;
     public final int TABLE_BORDER = 2;
-    public final int X_LENGTH = PAGE_WIDTH - MARGIN_LARGE - MARGIN_LARGE;
     private Context context;
     public Paint paintTitle, paintTitleBold, paintSubTitleBold, paintNormal, paintMaior, paintMedio;
     protected Bitmap printBitmap;
@@ -47,7 +45,7 @@ public class BasePaint {
 
         paintSubTitleBold = new Paint(Color.BLACK);
         paintSubTitleBold.setTextSize((float) 17.5);
-        paintSubTitleBold.setTypeface(Typeface.create(Typeface.SANS_SERIF,Typeface.BOLD));
+        paintSubTitleBold.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD));
 
         paintNormal = new Paint(Color.BLACK);
         paintNormal.setTextSize(15);
@@ -70,26 +68,6 @@ public class BasePaint {
         return context;
     }
 
-    public Paint getPaintTitle() { return paintTitle; }
-
-    public Paint getPaintTitleBold() { return paintTitleBold; }
-
-    public Paint getPaintSubTitleBold() {
-        return paintSubTitleBold;
-    }
-
-    public Paint getPaintNormal() {
-        return paintNormal;
-    }
-
-    public Paint getPaintMedio() {
-        return paintMedio;
-    }
-
-    public Paint getPaintMaior() {
-        return paintMaior;
-    }
-
     public Bitmap getBitmapFromAsset(String filePath, int widthHeight) {
         AssetManager assetManager = getContext().getAssets();
         InputStream stream;
@@ -97,7 +75,7 @@ public class BasePaint {
         try {
             stream = assetManager.open(filePath);
             bitmap = BitmapFactory.decodeStream(stream);
-        } catch (IOException e) {
+        } catch (IOException ignored) {
         }
         return scaleDown(bitmap, true, widthHeight);
     }
@@ -109,8 +87,7 @@ public class BasePaint {
                 (float) widthHeight / realImage.getHeight());
         int width = Math.round((float) ratio * realImage.getWidth());
         int height = Math.round((float) ratio * realImage.getHeight());
-        Bitmap newBitmap = Bitmap.createScaledBitmap(realImage, width,
-                height, filter);
+        Bitmap newBitmap = Bitmap.createScaledBitmap(realImage, width, height, filter);
         return newBitmap;
     }
 
@@ -147,7 +124,7 @@ public class BasePaint {
         return bitmapReturn;
     }
 
-    public void printDocumnetClose(){
-        printBitmap=getFinalBitmap();
+    public void printDocumnetClose() {
+        printBitmap = getFinalBitmap();
     }
 }

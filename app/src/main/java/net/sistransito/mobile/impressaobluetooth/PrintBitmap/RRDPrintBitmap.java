@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import net.sistransito.mobile.appconstantes.AppConstants;
 import net.sistransito.mobile.appobjeto.AppObject;
 import net.sistransito.mobile.autoinfracao.DadosDoAuto;
+import net.sistransito.mobile.impressaobluetooth.PrintBitmap.base.BasePrintBitmap;
 import net.sistransito.mobile.impressaobluetooth.PrintBitmap.base.PrintBitmapFormat;
 import net.sistransito.mobile.rrd.RRDData;
 import net.sistransito.mobile.util.User;
@@ -14,19 +15,15 @@ import net.sistransito.mobile.util.User;
 /**
  * Created by GAZI_RIMON on 8/15/2016.
  */
-public class RRDPrintBitmap {
+public class RRDPrintBitmap extends BasePrintBitmap {
     private DadosDoAuto aData;
-    private User user;
-    private Context context;
     private RRDData rrdData;
-
     public RRDPrintBitmap(Context context,RRDData rrdData, DadosDoAuto autoData) {
-        this.context = context;
-        user = AppObject.getTinyDB(context).getObject(AppConstants.user, User.class);
+        super(context);
         this.aData=autoData;
         this.rrdData=rrdData;
     }
-
+    @Override
     public Bitmap getBitmap() {
         PrintBitmapFormat bitmapFormat = new PrintBitmapFormat(context);
 

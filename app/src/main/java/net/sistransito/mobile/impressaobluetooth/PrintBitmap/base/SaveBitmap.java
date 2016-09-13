@@ -79,7 +79,7 @@ public class SaveBitmap {
         if (file.exists()) {
             file.delete();
         }
-        filePath=file.getPath();
+        filePath = file.getPath();
         return file;
     }
 }

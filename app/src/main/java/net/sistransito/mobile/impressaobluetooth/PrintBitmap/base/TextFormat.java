@@ -6,9 +6,6 @@ import android.graphics.Rect;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by GAZI_RIMON on 8/15/2016.
- */
 public class TextFormat {
 
 //    public static List<String> getFormatText(String text, Paint mPaint, int width) {
@@ -50,17 +47,15 @@ public class TextFormat {
         return textBound.width();
     }
 
-
     public static String[] split(String text) {
-        String lines[] = text.split("\\n");
-        return lines;
+        return text.split("\\n");
     }
 
     public static List<CharSequence> getTextLine(String text, Paint mPaint, int width) {
         List<CharSequence> mtext = new ArrayList<>();
         String[] words = text.split("\\s+");
         List<CharSequence> mListTemp = new ArrayList<>();
-        int i = 0;
+        int i;
         for (i = 0; i < words.length; i++) {
             if (width < getTextBoundWidth(getListToChar(mListTemp).toString(), mPaint)) {
                 int size = mListTemp.size() - 1;
@@ -75,11 +70,7 @@ public class TextFormat {
                 mListTemp.add(s);
             }
         }
-
-
         mtext.add(getListToChar(mListTemp));
-        words = null;
-        mListTemp = null;
         return mtext;
     }
 
