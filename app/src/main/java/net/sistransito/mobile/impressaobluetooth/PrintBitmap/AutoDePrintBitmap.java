@@ -29,26 +29,45 @@ public class AutoDePrintBitmap extends BasePrintBitmap {
                 "DEPARTAMENTO DE TRÂNSITO DO ESTADO DO PARÁ";
         String subTitle = "AUTO DE INFRAÇÃO DE TRÂNSITO (AIT)";
 
-        bitmapFormat.createTitle(title, subTitle, "ic_left_title.png", "ic_right_title.png");
-        bitmapFormat.createQuotes("1-IDENTIFICAÇÃO DA AUTUAÇÃO", Paint.Align.LEFT, true, false);
-        bitmapFormat.createTableIdentificacao("ÓRGÃO AUTUADOR", user.getCodigo_orgao(), "NÚMERO DO AIT", aData.getNumero_auto(), false, PrintBitmapFormat.TableCellAlign.MIDDLE);
+        bitmapFormat.createTitle(title, subTitle, "ic_left_title.png", "ic_right_title.png", PrintBitmapFormat.TITLE_FONT_SIZE, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
+        bitmapFormat.createQuotes("1-IDENTIFICAÇÃO DA AUTUAÇÃO", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
 
-        bitmapFormat.createQuotes("2-IDENTIFICAÇÃO DO VEÍCULO", Paint.Align.LEFT, true, false);
-        bitmapFormat.createTable("PLACA", aData.getPlate(), "UF", aData.getUf(), "PAIS", aData.getPais(), "CHASSI", aData.getChassi(), false);
-        bitmapFormat.createTable("MARCA/MODELO", aData.getModel(), "ESPÉCIE", aData.getEspecie(), true, PrintBitmapFormat.TableCellAlign.MIDDLE);
+        bitmapFormat.createTitle("ÓRGÃO AUTUADOR", user.getCodigo_orgao(), "NÚMERO DO AIT", aData.getNumero_auto(), PrintBitmapFormat.NORMAL_FONT,
+                PrintBitmapFormat.MAIOR_FONT);
 
-        bitmapFormat.createQuotes("3-IDENTIFICAÇÃO DO CONDUTOR", Paint.Align.LEFT, true, false);
-        bitmapFormat.createQuotes("NOME", aData.getNome_do_Condutor(), false);
-        bitmapFormat.createTable("REGISTRO CNH/PPD/ACC", aData.getCnh_ppd(), "UF", aData.getUf_cnh(), aData.getTipo_de_documento(), aData.getNumero_documento(), true);
+        bitmapFormat.createQuotes("2-IDENTIFICAÇÃO DO VEÍCULO", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
+        bitmapFormat.createTable("PLACA", aData.getPlate(), "UF",
+                aData.getUf(), "PAIS", aData.getPais(),
+                "CHASSI", aData.getChassi(), false,
+                PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
+
+        bitmapFormat.createTable("MARCA/MODELO", aData.getModel(),
+                "ESPÉCIE", aData.getEspecie(),
+                true, PrintBitmapFormat.TableCellAlign.MIDDLE,
+                PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
+
+        bitmapFormat.createQuotes("3-IDENTIFICAÇÃO DO CONDUTOR", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
+        bitmapFormat.createQuotes("NOME", aData.getNome_do_Condutor(), false, false, PrintBitmapFormat.NORMAL_FONT);
+
+        bitmapFormat.createTable("REGISTRO CNH/PPD/ACC", aData.getCnh_ppd(), "UF", aData.getUf_cnh(), aData.getTipo_de_documento(), aData.getNumero_documento(), true,
+                PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
 //
-        bitmapFormat.createQuotes("4-IDENTIFICAÇÃO DO LOCAL, DATA E HORA", Paint.Align.LEFT, true, false);
-        bitmapFormat.createQuotes("LOCAL", aData.getLocal(), false);
-        bitmapFormat.createTable("DATA", aData.getData(), "HORA", aData.getHora(), "CÓD. MUNICÍPIO", aData.getCodigo_do_municipio(), "MUNICÍPIO/UF", aData.getMunicipio() + "/" + aData.getUf(), true);
+        bitmapFormat.createQuotes("4-IDENTIFICAÇÃO DO LOCAL, DATA E HORA", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
+        bitmapFormat.createQuotes("LOCAL", aData.getLocal(), false, false, PrintBitmapFormat.NORMAL_FONT);
 
-        bitmapFormat.createQuotes("5-TIPIFICAÇÃO DA INFRAÇÃO", Paint.Align.LEFT, true, false);
-        bitmapFormat.createQuotes("DESCRIÇÃO DA INFRAÇÃO", aData.getInfracao(), false);
-        bitmapFormat.createTable("CÓD. INFRAÇÃO", aData.getEnquadra(), "DESDOBRAMENTO", aData.getDesdob(), "AMPARO LEGAL", aData.getAmparo_legal(), true);
-        bitmapFormat.createQuotes("EQUIPAMENTOS/INSTRUMENTOS DE AFERIÇÃO UTILIZADO", Paint.Align.LEFT, true, false);
+        bitmapFormat.createTable("DATA", aData.getData(), "HORA", aData.getHora(), "CÓD. MUNICÍPIO",
+                aData.getCodigo_do_municipio(), "MUNICÍPIO/UF",
+                aData.getMunicipio() + "/" + aData.getUf(),
+                true, PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
+
+        bitmapFormat.createQuotes("5-TIPIFICAÇÃO DA INFRAÇÃO", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
+        bitmapFormat.createQuotes("DESCRIÇÃO DA INFRAÇÃO", aData.getInfracao(), false, false, PrintBitmapFormat.NORMAL_FONT);
+
+        bitmapFormat.createTable("CÓD. INFRAÇÃO", aData.getEnquadra(),
+                "DESDOBRAMENTO", aData.getDesdob(),
+                "AMPARO LEGAL", aData.getAmparo_legal(), true, PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
+
+        bitmapFormat.createQuotes("EQUIPAMENTOS/INSTRUMENTOS DE AFERIÇÃO UTILIZADO", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
 
         if (aData.getDescricao().contains("Selecione")) {
             textoDescricao = "";
@@ -56,33 +75,52 @@ public class AutoDePrintBitmap extends BasePrintBitmap {
             textoDescricao = aData.getDescricao();
         }
 
-        bitmapFormat.createTable("DESCRIÇÃO", textoDescricao, "MARCA", aData.getMarca(), true, PrintBitmapFormat.TableCellAlign.MIDDLE);
-        bitmapFormat.createTable("MODELO", aData.getModelo(), "NÚMERO DE SÉRIE", aData.getNumero_de_serie(), true, PrintBitmapFormat.TableCellAlign.MIDDLE);
+        bitmapFormat.createTable("DESCRIÇÃO", textoDescricao, "MARCA", aData.getMarca(), true, PrintBitmapFormat.TableCellAlign.MIDDLE, PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
+
+        bitmapFormat.createTable("MODELO", aData.getModelo(), "NÚMERO DE SÉRIE", aData.getNumero_de_serie(), true, PrintBitmapFormat.TableCellAlign.MIDDLE, PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
 
         if (aData.getDescricao().contains("Etilometro")) {
-            bitmapFormat.createTable("MEDIÇÃO REALIZADA", aData.getMedicao_realizada() + " Mg/L", "LIMITE REGULAMENTADO", "0,00 Mg/L", true, PrintBitmapFormat.TableCellAlign.MIDDLE);
-            bitmapFormat.createTable("VALOR CONSIDERADO", aData.getValor_considerada() + " Mg/L", "NÚMERO DA AMOSTRA", aData.getN_da_amostra(), true, PrintBitmapFormat.TableCellAlign.MIDDLE);
+            bitmapFormat.createTable("MEDIÇÃO REALIZADA", aData.getMedicao_realizada() + " Mg/L",
+                    "LIMITE REGULAMENTADO", "0,00 Mg/L",
+                    true, PrintBitmapFormat.TableCellAlign.MIDDLE,
+                    PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
+
+            bitmapFormat.createTable("VALOR CONSIDERADO", aData.getValor_considerada() + " Mg/L",
+                    "NÚMERO DA AMOSTRA", aData.getN_da_amostra(),
+                    true, PrintBitmapFormat.TableCellAlign.MIDDLE, PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
         } else {
-            bitmapFormat.createTable("MEDIÇÃO REALIZADA", aData.getMedicao_realizada(), "LIMITE REGULAMENTADO", "", true, PrintBitmapFormat.TableCellAlign.MIDDLE);
-            bitmapFormat.createTable("VALOR CONSIDERADO", aData.getValor_considerada(), "NÚMERO DA AMOSTRA/TCA", aData.getN_da_amostra(), true, PrintBitmapFormat.TableCellAlign.MIDDLE);
+            bitmapFormat.createTable("MEDIÇÃO REALIZADA", aData.getMedicao_realizada(),
+                    "LIMITE REGULAMENTADO", "", true,
+                    PrintBitmapFormat.TableCellAlign.MIDDLE,
+                    PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
+
+            bitmapFormat.createTable("VALOR CONSIDERADO", aData.getValor_considerada(),
+                    "NÚMERO DA AMOSTRA/TCA", aData.getN_da_amostra(),
+                    true, PrintBitmapFormat.TableCellAlign.MIDDLE,
+                    PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
         }
 
-        bitmapFormat.createQuotes("PROCEDIMENTOS", Paint.Align.LEFT, true, false);
-        bitmapFormat.createQuotes("MEDIDAS ADMINISTRATIVAS", aData.getProcedimentos(), true);
-        bitmapFormat.createQuotesObs("OBSERVAÇÕES", aData.getObservacao(), true);
+        bitmapFormat.createQuotes("PROCEDIMENTOS", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
+        bitmapFormat.createQuotes("MEDIDAS ADMINISTRATIVAS", aData.getProcedimentos(), true, false, PrintBitmapFormat.NORMAL_FONT);
+        bitmapFormat.createQuotesObs("OBSERVAÇÕES", aData.getObservacao(), true, PrintBitmapFormat.NORMAL_FONT);
 
-        bitmapFormat.createQuotes("6-IDENTIFICAÇÃO DA AUTORIDADE OU AGENTE AUTUADOR", Paint.Align.LEFT, true, false);
-        bitmapFormat.createTableName("NOME", user.getNome().toUpperCase(), "MATRÍCULA", user.getMatricula(), false, PrintBitmapFormat.TableCellAlign.RIGHT);
-        bitmapFormat.createQuotesAssinatura("ASSINATURA", "\n\n\n", true);
+        bitmapFormat.createQuotes("6-IDENTIFICAÇÃO DA AUTORIDADE OU AGENTE AUTUADOR", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
+        bitmapFormat.createTableName("NOME", user.getNome().toUpperCase(), "MATRÍCULA", user.getMatricula(), false, PrintBitmapFormat.TableCellAlign.RIGHT,
+                PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
 
-        bitmapFormat.createQuotes("7-IDENTIFICAÇÃO DO EMBARCADOR OU EXPEDIDOR", Paint.Align.LEFT, true, false);
-        bitmapFormat.createTableName("NOME", aData.getIdetificacao_embarcador(), "CNPJ/CPF", aData.getCnpj_cpf_embarcador(), true, PrintBitmapFormat.TableCellAlign.RIGHT);
+        bitmapFormat.createQuotesAssinatura("ASSINATURA", "\n\n\n", true, PrintBitmapFormat.NORMAL_FONT);
 
-        bitmapFormat.createQuotes("8-IDENTIFICAÇÃO DO TRANSPORTADOR", Paint.Align.LEFT, true, false);
-        bitmapFormat.createTableName("NOME", aData.getIdentificacao_do_transportador(), "CNPJ/CPF", aData.getCnpj_cpf_transportador(), true, PrintBitmapFormat.TableCellAlign.RIGHT);
+        bitmapFormat.createQuotes("7-IDENTIFICAÇÃO DO EMBARCADOR OU EXPEDIDOR", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
+        bitmapFormat.createTableName("NOME", aData.getIdetificacao_embarcador(), "CNPJ/CPF", aData.getCnpj_cpf_embarcador(), true, PrintBitmapFormat.TableCellAlign.RIGHT,
+                PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
 
-        bitmapFormat.createQuotes("9-ASSINATURA DO INFRATOR OU CONDUTOR", Paint.Align.LEFT, true, false);
-        bitmapFormat.createQuotesAssinatura("\n\n\n", "\n\n\n", true);
+        bitmapFormat.createQuotes("8-IDENTIFICAÇÃO DO TRANSPORTADOR", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
+        bitmapFormat.createTableName("NOME", aData.getIdentificacao_do_transportador(), "CNPJ/CPF", aData.getCnpj_cpf_transportador(),
+                true, PrintBitmapFormat.TableCellAlign.RIGHT
+                , PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
+
+        bitmapFormat.createQuotes("9-ASSINATURA DO INFRATOR OU CONDUTOR", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
+        bitmapFormat.createQuotesAssinatura("\n\n\n", "\n\n\n", true, PrintBitmapFormat.NORMAL_FONT);
 /**
  bitmapFormat.setNewLine(2);
  bitmapFormat.createQuotes("ORIENTAÇÕES AO USUÁRIO", Paint.Align.CENTER);

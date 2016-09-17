@@ -19,7 +19,7 @@ public class BasePaint {
     public final int MARGIN_LARGE = 10;
     public final int TABLE_BORDER = 2;
     private Context context;
-    public Paint paintTitle, paintTitleBold, paintSubTitleBold, paintNormal, paintMaior, paintMedio;
+    public Paint paint;
     protected Bitmap printBitmap;
     public int y_position, x_position_start, x_text_start, x_position_end;
     public Canvas canvas;
@@ -34,33 +34,44 @@ public class BasePaint {
 
         printBitmap = getRawBitmap();
         canvas = new Canvas(printBitmap);
-        paintTitle = new Paint(Color.BLACK);
-        paintTitle.setTextSize(17);
-        paintTitle.setTypeface(Typeface.create(Typeface.SANS_SERIF,
-                Typeface.NORMAL));
+        paint = new Paint(Color.BLACK);
+        setPaintNormal();
+        //        paintTitle.setTextSize(17);
+//
+//        paintTitleBold = new Paint(Color.BLACK);
+//        paintTitleBold.setTextSize(19);
+//        paintTitleBold.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD));
+//
+//        paintSubTitleBold = new Paint(Color.BLACK);
+//        paintSubTitleBold.setTextSize((float) 17.5);
+//        paintSubTitleBold.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD));
+//
+//        paintNormal = new Paint(Color.BLACK);
+//        paintNormal.setTextSize(15);
+//        paintNormal.setTypeface(Typeface.create(Typeface.SANS_SERIF,
+//                Typeface.NORMAL));
+//
+//        paintMedio = new Paint(Color.BLACK);
+//        paintMedio.setTextSize(19);
+//        paintMedio.setTypeface(Typeface.create(Typeface.SANS_SERIF,
+//                Typeface.NORMAL));
+//
+//        paintMaior = new Paint(Color.BLACK);
+//        paintMaior.setTextSize(25);
+//        paintMaior.setTypeface(Typeface.create(Typeface.SANS_SERIF,
+//                Typeface.BOLD));
 
-        paintTitleBold = new Paint(Color.BLACK);
-        paintTitleBold.setTextSize(19);
-        paintTitleBold.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD));
+    }
 
-        paintSubTitleBold = new Paint(Color.BLACK);
-        paintSubTitleBold.setTextSize((float) 17.5);
-        paintSubTitleBold.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD));
-
-        paintNormal = new Paint(Color.BLACK);
-        paintNormal.setTextSize(15);
-        paintNormal.setTypeface(Typeface.create(Typeface.SANS_SERIF,
-                Typeface.NORMAL));
-
-        paintMedio = new Paint(Color.BLACK);
-        paintMedio.setTextSize(19);
-        paintMedio.setTypeface(Typeface.create(Typeface.SANS_SERIF,
-                Typeface.NORMAL));
-
-        paintMaior = new Paint(Color.BLACK);
-        paintMaior.setTextSize(25);
-        paintMaior.setTypeface(Typeface.create(Typeface.SANS_SERIF,
+    public void setPaintBold() {
+        paint.setTypeface(Typeface.create(Typeface.SANS_SERIF,
                 Typeface.BOLD));
+
+    }
+
+    public void setPaintNormal() {
+        paint.setTypeface(Typeface.create(Typeface.SANS_SERIF,
+                Typeface.NORMAL));
 
     }
 
