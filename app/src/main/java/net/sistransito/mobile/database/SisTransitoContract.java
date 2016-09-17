@@ -5,7 +5,6 @@ import android.provider.BaseColumns;
 public final class SistransitoContract {
 
 	public SistransitoContract() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public static abstract class UsuarioEntry implements BaseColumns{
