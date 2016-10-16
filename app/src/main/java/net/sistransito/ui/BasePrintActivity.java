@@ -12,6 +12,7 @@ import net.sistransito.mobile.impressaobluetooth.PrintBitmap.base.BasePrintBitma
 import net.sistransito.mobile.impressaobluetooth.bluetooth.Bluetooth;
 import net.sistransito.mobile.impressaobluetooth.bluetooth.BluetoothPrinterListerner;
 import net.sistransito.mobile.impressaobluetooth.bluetooth.ESCP;
+import net.sistrnsitomobile.R;
 
 import java.util.Set;
 
@@ -36,7 +37,8 @@ public abstract class BasePrintActivity extends AppCompatActivity implements
 
     protected void startPrint(final BasePrintBitmap printBitmap) {
         if (checkBth()) {
-            Toast.makeText(this, "Imprimindo...", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getResources().getString(
+                    R.string.printing), Toast.LENGTH_LONG).show();
             new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -57,7 +59,7 @@ public abstract class BasePrintActivity extends AppCompatActivity implements
     public boolean checkBth() {
         if (!mBth.isConnected()) {
             if (!mBth.Enable()) {
-                Alert("Nao foi possivel abilitar bluetooth, tente abilitar manualmente e tente novamente.");
+                Alert(getResources().getString(R.string.erro_bluetooth));
                 return false;
             }
             String mac = null;
@@ -68,13 +70,13 @@ public abstract class BasePrintActivity extends AppCompatActivity implements
                 }
             }
             if (mac == null) {
-                Alert("Nao foi encontrada MPT-III\n\nFaça o pareamento com o disposivo e tente novamente.");
+                Alert(getResources().getString(R.string.print_not_found));
                 return false;
             }
             if (!mBth.Open(mac)) {
-                Alert("Nao foi possivel conectar ao dispositivo ["
+                Alert(getResources().getString(R.string.printer_off)
                         + mac
-                        + "]\n\nLigue ou conecte o dispositivo e tente novamente.");
+                        + getResources().getString(R.string.start_printer));
                 return false;
             }
         }
@@ -86,7 +88,7 @@ public abstract class BasePrintActivity extends AppCompatActivity implements
         AlertDialog ad = new AlertDialog.Builder(this).create();
         ad.setCancelable(false);
         ad.setMessage(message);
-        ad.setButton("OK", new DialogInterface.OnClickListener() {
+        ad.setButton(getResources().getString(R.string.btn_ok), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(final DialogInterface dialog, final int which) {
                 dialog.dismiss();

@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import net.sistrnsitomobile.R;
 
-public class SubTitlRRDDocumentoFragment extends Fragment {
+public class SubTitleRRDDocumentoFragment extends Fragment {
 	private View view;
 
 	@Override
@@ -19,8 +19,8 @@ public class SubTitlRRDDocumentoFragment extends Fragment {
 		return view;
 	}
 
-	public static SubTitlRRDDocumentoFragment newInstance() {
-		return new SubTitlRRDDocumentoFragment();
+	public static SubTitleRRDDocumentoFragment newInstance() {
+		return new SubTitleRRDDocumentoFragment();
 	}
 
 }

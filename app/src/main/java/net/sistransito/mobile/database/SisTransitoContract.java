@@ -2,9 +2,9 @@ package net.sistransito.mobile.database;
 
 import android.provider.BaseColumns;
 
-public final class SistransitoContract {
+public final class SisTransitoContract {
 
-	public SistransitoContract() {
+	public SisTransitoContract() {
 	}
 	
 	public static abstract class UsuarioEntry implements BaseColumns{

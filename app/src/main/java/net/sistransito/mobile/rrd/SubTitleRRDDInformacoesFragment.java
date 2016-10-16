@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import net.sistrnsitomobile.R;
 
-public class SubTitlRRDDInformacoesFragment extends Fragment {
+public class SubTitleRRDDInformacoesFragment extends Fragment {
 	private View view;
 
 	@Override
@@ -17,8 +17,8 @@ public class SubTitlRRDDInformacoesFragment extends Fragment {
 		view = inflater.inflate(R.layout.rrd_informacoes_fragment_subtitulo, null, false);
 		return view;
 	}
-	public static SubTitlRRDDInformacoesFragment newInstance() {
-		return new SubTitlRRDDInformacoesFragment();
+	public static SubTitleRRDDInformacoesFragment newInstance() {
+		return new SubTitleRRDDInformacoesFragment();
 	}
 
 }

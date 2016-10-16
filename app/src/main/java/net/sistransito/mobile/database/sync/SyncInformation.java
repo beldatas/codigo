@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import cz.msebera.android.httpclient.NameValuePair;
 import cz.msebera.android.httpclient.message.BasicNameValuePair;
 
-public class SyncInofrmation extends AsyncTask<String, String, String> {
+public class SyncInformation extends AsyncTask<String, String, String> {
 
 	private Context context;
 	private ProgressDialog pDialog;
@@ -37,7 +37,7 @@ public class SyncInofrmation extends AsyncTask<String, String, String> {
 	private String autode_json, tav_json, tca_json, rrd_json;
 	private boolean sync_status;
 
-	public SyncInofrmation(Context con) {
+	public SyncInformation(Context con) {
 		context = con;
 	}
 

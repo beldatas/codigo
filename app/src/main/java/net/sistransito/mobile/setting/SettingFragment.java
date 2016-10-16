@@ -18,7 +18,7 @@ import com.rey.material.widget.CheckBox;
 
 import net.sistransito.mobile.database.DatabaseCreator;
 import net.sistransito.mobile.database.SettingDatabaseAdapter;
-import net.sistransito.mobile.database.sync.SyncInofrmation;
+import net.sistransito.mobile.database.sync.SyncInformation;
 import net.sistransito.mobile.network.NetworkConnection;
 import net.sistrnsitomobile.R;
 
@@ -115,7 +115,7 @@ public class SettingFragment extends Fragment implements
         switch (v.getId()) {
             case R.id.btn_sync:
                 if (NetworkConnection.isNetworkAvailable(getActivity())) {
-                    SyncInofrmation inofrmation = new SyncInofrmation(getActivity());
+                    SyncInformation inofrmation = new SyncInformation(getActivity());
                     inofrmation.execute("");
                 } else {
                     Toast.makeText(getActivity(),

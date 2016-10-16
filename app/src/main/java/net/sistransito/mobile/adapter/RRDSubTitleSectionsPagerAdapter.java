@@ -6,8 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.view.ViewGroup;
 
-import net.sistransito.mobile.rrd.SubTitlRRDDInformacoesFragment;
-import net.sistransito.mobile.rrd.SubTitlRRDDocumentoFragment;
+import net.sistransito.mobile.rrd.SubTitleRRDDInformacoesFragment;
+import net.sistransito.mobile.rrd.SubTitleRRDDocumentoFragment;
 
 public class RRDSubTitleSectionsPagerAdapter extends FragmentPagerAdapter {
 
@@ -31,9 +31,9 @@ public class RRDSubTitleSectionsPagerAdapter extends FragmentPagerAdapter {
 		switch (index) {
 
 		case 0:
-			return  SubTitlRRDDocumentoFragment.newInstance();
+			return  SubTitleRRDDocumentoFragment.newInstance();
 		case 1:
-			return  SubTitlRRDDInformacoesFragment.newInstance();
+			return  SubTitleRRDDInformacoesFragment.newInstance();
 		}
 		return null;
 	}

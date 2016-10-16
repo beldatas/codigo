@@ -47,13 +47,13 @@ public class AutoDePrintBitmap extends BasePrintBitmap {
                 PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
 
         bitmapFormat.createQuotes("3-IDENTIFICAÇÃO DO CONDUTOR", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
-        bitmapFormat.createQuotes("NOME", aData.getNome_do_Condutor(), false, false, PrintBitmapFormat.NORMAL_FONT);
+        bitmapFormat.createQuotes("NOME", aData.getNome_do_Condutor(), false, false, PrintBitmapFormat.MEDIO_FONT);
 
         bitmapFormat.createTable("REGISTRO CNH/PPD/ACC", aData.getCnh_ppd(), "UF", aData.getUf_cnh(), aData.getTipo_de_documento(), aData.getNumero_documento(), true,
                 PrintBitmapFormat.NORMAL_FONT, PrintBitmapFormat.MEDIO_FONT);
 //
         bitmapFormat.createQuotes("4-IDENTIFICAÇÃO DO LOCAL, DATA E HORA", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
-        bitmapFormat.createQuotes("LOCAL", aData.getLocal(), false, false, PrintBitmapFormat.NORMAL_FONT);
+        bitmapFormat.createQuotes("LOCAL", aData.getLocal(), false, false, PrintBitmapFormat.MEDIO_FONT);
 
         bitmapFormat.createTable("DATA", aData.getData(), "HORA", aData.getHora(), "CÓD. MUNICÍPIO",
                 aData.getCodigo_do_municipio(), "MUNICÍPIO/UF",
@@ -101,8 +101,8 @@ public class AutoDePrintBitmap extends BasePrintBitmap {
         }
 
         bitmapFormat.createQuotes("PROCEDIMENTOS", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
-        bitmapFormat.createQuotes("MEDIDAS ADMINISTRATIVAS", aData.getProcedimentos(), true, false, PrintBitmapFormat.NORMAL_FONT);
-        bitmapFormat.createQuotesObs("OBSERVAÇÕES", aData.getObservacao(), true, PrintBitmapFormat.NORMAL_FONT);
+        bitmapFormat.createQuotes("MEDIDAS ADMINISTRATIVAS", aData.getProcedimentos(), true, false, PrintBitmapFormat.MEDIO_FONT);
+        bitmapFormat.createQuotesObs("OBSERVAÇÕES", aData.getObservacao(), true, PrintBitmapFormat.MEDIO_FONT);
 
         bitmapFormat.createQuotes("6-IDENTIFICAÇÃO DA AUTORIDADE OU AGENTE AUTUADOR", Paint.Align.LEFT, true, false, PrintBitmapFormat.SUB_TITLE_FONT_SIZE);
         bitmapFormat.createTableName("NOME", user.getNome().toUpperCase(), "MATRÍCULA", user.getMatricula(), false, PrintBitmapFormat.TableCellAlign.RIGHT,

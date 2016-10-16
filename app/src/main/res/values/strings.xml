@@ -5,9 +5,16 @@
         <item>Configurações</item>
         <item>Ajuda</item>
     </string-array>
+
+    <string name="printing">Imprimindo...</string>
+    <string name="erro_bluetooth">Nao foi possivel abilitar bluetooth, tente abilitar manualmente e tente novamente.</string>
+    <string name="print_not_found">Nao foi encontrada MPT-III\n\nFaça o pareamento com o disposivo e tente novamente.</string>
+    <string name="printer_off">Não é possível conectar ao dispositivo [</string>
+    <string name="start_printer">]\n\nLigue ou conecte o dispositivo e tente novamente</string>
     <string name="invalid_in">Entrada inválida</string>
     <string name="erro_carregar_img">Erro ao carregar imagem</string>
     <string name="erro_desconhecido">Ocorreu algum erro</string>
+    <string name="btn_ok">OK</string>
     <string name="processing">Carregando...</string>
     <string name="login_fail">Falha no login</string>
     <string name="email_senha_invalid">Email ou senha inválidos</string>
