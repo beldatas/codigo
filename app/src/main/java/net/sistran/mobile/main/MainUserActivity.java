@@ -157,6 +157,8 @@ public class MainUserActivity extends AppCompatActivity implements Drawer.OnDraw
         result.addItem(new PrimaryDrawerItem().withName(R.string.texto_titulo_cpf).withIcon(R.mipmap.ic_i_id_p));
         result.addItem(new PrimaryDrawerItem().withName(R.string.opcoes_log).withIcon(R.mipmap.ic_log_n));
         result.addItem(new DividerDrawerItem());
+        result.addItem(new PrimaryDrawerItem().withName(R.string.setting).withIcon(R.mipmap.ic_settting_nav));
+        result.addItem(new DividerDrawerItem());
         result.addItem(new PrimaryDrawerItem().withName(R.string.logout).withIcon(R.mipmap.ic_logout));
         result.setOnDrawerItemClickListener(MainUserActivity.this);
         result.setSelection(0);
@@ -202,6 +204,9 @@ public class MainUserActivity extends AppCompatActivity implements Drawer.OnDraw
                     break;
                 case R.string.opcoes_log:
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, LogListFragment.newInstance()).commit();
+                    break;
+                case R.string.setting:
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, SettingFragment.newInstance()).commit();
                     break;
                 case R.string.logout:
                     AppObject.getTinyDB(this).putBoolean(AppConstants.isLogin, false);

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="primary">#646464</color>
-    <color name="primary_dark">#727272</color>
+    <color name="primary">#ea4410</color>
+    <color name="primary_dark">#8f2a0a</color>
     <color name="primary_light">#FFCCBC</color>
-    <color name="accent">#727272</color>
+    <color name="accent">#760909</color>
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>
@@ -50,9 +50,9 @@
     <color name="black">#000</color>
     <color name="red">#D85445</color>
     <color name="yellow">#fc8a00</color>
-    <color name="yellow_light">#c1bbb4</color>
+    <color name="yellow_light">#d79118</color>
     <color name="yellow_deep">#ff9702</color>
-    <color name="yellow_deep_2">#b6aeae</color>
+    <color name="yellow_deep_2">#ef8e2f</color>
     <color name="yellow_gray">#fedcb2</color>
     <color name="gray_1">#999999</color>
     <color name="gray_2">#f6f6f6</color>
@@ -63,23 +63,23 @@
     <color name="line_color">#c5c5c5</color>
     <color name="bacground_color">#e4e4e4</color>
     <color name="pink">#f94877</color>
-    <color name="yellow_line_color">#504e4c</color>
-    <color name="yellow_action_bar_color">#4d4944</color>
+    <color name="yellow_line_color">#fe8f18</color>
+    <color name="yellow_action_bar_color">#fc8900</color>
     <color name="holo_blue">#FF33E5B5</color>
     <color name="disable">#cecbc6</color>
     <color name="log_gray">#343434</color>
     <color name="log_blue">#10bcc9</color>
     <color name="yellow_gray_light">#fec580</color>
-    <color name="blue">#39579b</color>
+    <color name="blue">#995013</color>
     <color name="blue_p">#39579b</color>
     <color name="green">#83bf12</color>
     <color name="green_p">#72ab00</color>
-    <color name="organge">#ffa71c</color>
-    <color name="organge_p">#e69b33</color>
+    <color name="organge">#9f2e1e</color>
+    <color name="organge_p">#e66c33</color>
     <color name="lobster">#ff6267</color>
     <color name="lobster_p">#c94a4e</color>
-    <color name="yellow_btn">#949182</color>
-    <color name="yellow_btn_p">#aba9a4</color>
+    <color name="yellow_btn">#9f530b</color>
+    <color name="yellow_btn_p">#df8805</color>
     <color name="whight_p">#e6e6e6</color>
 
 </resources>
