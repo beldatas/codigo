@@ -164,6 +164,30 @@ public class MainUserActivity extends AppCompatActivity implements Drawer.OnDraw
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.btn_overflow_autuar:
+                DadosAuto data = new DadosAuto();
+                data.setDataisNull(true);
+                Intent intent = new Intent(this, AutoActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable(DadosAuto.getIDAuto(), data);
+                intent.putExtras(bundle);
+                startActivity(intent);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     public boolean onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {
 
         if (drawerItem != null && drawerItem instanceof Nameable) {
@@ -253,15 +277,4 @@ public class MainUserActivity extends AppCompatActivity implements Drawer.OnDraw
         }
     }
 
-    public void OpenItemMenu(){
-
-        DadosAuto data = new DadosAuto();
-        data.setDataisNull(true);
-        Intent intent = new Intent(this, AutoActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putSerializable(DadosAuto.getIDAuto(), data);
-        intent.putExtras(bundle);
-        startActivity(intent);
-
-    }
 }
