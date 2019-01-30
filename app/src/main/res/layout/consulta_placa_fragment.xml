@@ -51,14 +51,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/widght_margin"
-                    android:background="@drawable/btn_yellow"
+                    android:background="@drawable/btn_green"
                     android:drawableLeft="@drawable/ic_autor"
                     android:drawablePadding="@dimen/widght_padding"
                     android:gravity="left|center_vertical"
                     android:paddingLeft="@dimen/widght_padding_2"
                     android:text="@string/autuar"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/pink" />
+                    android:textColor="@color/white" />
             </LinearLayout>
 
         </LinearLayout>
@@ -128,7 +128,7 @@
                 style="@style/Material.Drawable.Ripple.Wave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_green"
+                android:background="@drawable/btn_blue"
                 android:drawableStart="@drawable/ic_send"
                 android:drawablePadding="@dimen/widght_padding"
                 android:gravity="left|center_vertical"
