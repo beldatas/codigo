@@ -54,8 +54,8 @@ public class ColorSelector extends android.app.Dialog implements OnValueChangedL
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.color_selector);
 	    
-	    view = (LinearLayout)findViewById(R.id.contentSelector);
-		backView = (RelativeLayout)findViewById(R.id.rootSelector);
+	    view = findViewById(R.id.contentSelector);
+		backView = findViewById(R.id.rootSelector);
 		backView.setOnTouchListener(new OnTouchListener() {
 			
 			@Override
@@ -116,7 +116,7 @@ public class ColorSelector extends android.app.Dialog implements OnValueChangedL
 	
 	// Event that execute when color selector is closed
 	public interface OnColorSelectedListener{
-		public void onColorSelected(int color);
+		void onColorSelected(int color);
 	}
 		
 	@Override

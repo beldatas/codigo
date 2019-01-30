@@ -90,11 +90,7 @@ public class Switch extends CustomView {
 				float x = event.getX();
 				x = (x < ball.xIni) ? ball.xIni : x;
 				x = (x > ball.xFin) ? ball.xFin : x;
-				if (x > ball.xCen) {
-					check = true;
-				} else {
-					check = false;
-				}
+                check = x > ball.xCen;
 				ViewHelper.setX(ball, x);
 				ball.changeBackground();
 				if ((event.getX() <= getWidth() && event.getX() >= 0)) {
@@ -244,7 +240,7 @@ public class Switch extends CustomView {
 	}
 
 	public interface OnCheckListener {
-		public void onCheck(boolean check);
+		void onCheck(boolean check);
 	}
 
 }

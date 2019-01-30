@@ -1,45 +1,42 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.3'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
-    dexOptions {
-        incremental true
-        javaMaxHeapSize "1g"
-    }
 
 
     defaultConfig {
-        applicationId "net.sistrnsitomobile"
-        minSdkVersion 11
-        targetSdkVersion 23
+        applicationId "net.sistran"
+        minSdkVersion 21
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'de.greenrobot:eventbus:3.0.0-beta1'
-    compile 'com.google.code.gson:gson:2.3.1'
-    compile 'com.loopj.android:android-async-http:1.4.9'
-    compile('com.mikepenz:materialdrawer:3.1.2@aar') {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation('com.mikepenz:materialdrawer:3.1.2@aar') {
         transitive = true
     }
-    compile 'com.github.rey5137:material:1.2.1'
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
-    compile 'com.viewpagerindicator:library:2.4.1@aar'
-    compile project(':materialDesign')
-    compile 'com.android.support:appcompat-v7:23.0.0'
-    compile 'com.android.support:design:23.0.0'
-    compile 'com.itextpdf:itextg:5.5.9'
-    compile 'com.android.support:multidex:1.0.0'
+    implementation project(':materialDesign')
+    implementation 'de.greenrobot:eventbus:3.0.0-beta1'
+    implementation 'com.google.code.gson:gson:2.3.1'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'com.github.rey5137:material:1.2.5'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+    implementation 'fr.avianey.com.viewpagerindicator:library:2.4.1.1@aar'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.github.ganfra:material-spinner:2.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
 }

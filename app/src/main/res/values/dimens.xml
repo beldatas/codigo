@@ -1,14 +1,20 @@
  <resources>
 
         <!-- Default screen margins, per the Android Design guidelines. -->
+         <dimen name="padding_foto">30dip</dimen>
+         <dimen name="padding_left_foto">10dip</dimen>
         <dimen name="title_fint_size">32sp</dimen>
         <dimen name="activity_horizontal_margin">16dp</dimen>
         <dimen name="activity_vertical_margin">16dp</dimen>
+         <dimen name="padding_left_tab_titulo">50dip</dimen>
+         <dimen name="padding_top_edit">13dip</dimen>
         <dimen name="widght_padding_4">4dip</dimen>
         <dimen name="widght_padding">8dip</dimen>
         <dimen name="widght_padding_2">10dip</dimen>
+         <dimen name="widght_padding_2_5">10dip</dimen>
         <dimen name="widght_padding_3">20dip</dimen>
         <dimen name="widght_padding_5">3dip</dimen>
+         <dimen name="widght_padding_6">16dip</dimen>
         <dimen name="widght_margin">8dip</dimen>
         <dimen name="widght_margin_top">5dip</dimen>
         <dimen name="widght_margin_top_3">2dip</dimen>

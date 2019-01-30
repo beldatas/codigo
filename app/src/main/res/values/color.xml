@@ -9,6 +9,7 @@
     <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
+    <color name="background_auto">#F6EBBC</color>
 
     <!-- Material DEFAULT colors -->
     <color name="material_drawer_primary">#2196F3</color>
@@ -58,7 +59,7 @@
     <color name="gray_3">#e7e8e9</color>
     <color name="gray_4">#dfdedf</color>
     <color name="gray_5">#646464</color>
-    <color name="whight">#ffffff</color>
+    <color name="white">#ffffff</color>
     <color name="line_color">#c5c5c5</color>
     <color name="bacground_color">#e4e4e4</color>
     <color name="pink">#f94877</color>

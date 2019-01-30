@@ -16,17 +16,90 @@
         <item>Outros</item>
     </string-array>
 
-    <string-array name="listCategoria">
-        <item>OFICIAL</item>
+    <string-array name="filter_numero_pais">
+        <item>99</item>
+        <item>11</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>60</item>
+        <item>80</item>
+        <item>90</item>
+        <item>91</item>
+        <item>92</item>
+        <item>99</item>
+    </string-array>
+
+    <string-array name="filter_status_licenciamento">
+        <item>Atrasado</item>
+        <item>Normal</item>
+    </string-array>
+
+    <string-array name="filter_impedimento_furto">
+        <item>Não</item>
+        <item>Sim</item>
+    </string-array>
+
+    <string-array name="filter_cores">
+        <item></item>
+        <item>AMARELO</item>
+        <item>AZUL</item>
+        <item>BEGE</item>
+        <item>BRANCA</item>
+        <item>CINZA</item>
+        <item>DOURADA</item>
+        <item>GRENÁ</item>
+        <item>LARANJA</item>
+        <item>MARROM</item>
+        <item>PRATA</item>
+        <item>PRETA</item>
+        <item>ROSA</item>
+        <item>ROXA</item>
+        <item>VERDE</item>
+        <item>VERMELHA</item>
+        <item>FANTASIA</item>
+    </string-array>
+
+    <string-array name="filter_tipo_veiculo">
+        <item></item>
+        <item>BICICLETA</item>
+        <item>CICLOMOTOR</item>
+        <item>MOTONETA</item>
+        <item>MOTOCICLETA</item>
+        <item>TRICICLO</item>
+        <item>AUTOMÓVEL</item>
+        <item>MICROONIBUS</item>
+        <item>ÔNIBUS</item>
+        <item>REBOQUE</item>
+        <item>SEMI-REBOQUE</item>
+        <item>CAMIONETA</item>
+        <item>CAMINHÃO</item>
+        <item>CAMINHÃO TRATOR</item>
+        <item>TRATOR DE RODAS</item>
+        <item>TRATOR DE ESTEIRA</item>
+        <item>TRATOR MISTO</item>
+        <item>QUADRICICLO</item>
+        <item>CHEASSI PLATAFORMA</item>
+        <item>CAMINHONETE</item>
+        <item>UTILITÁRIO</item>
+        <item>MOTOR-CASA</item>
+    </string-array>
+
+    <string-array name="list_categoria">
+        <item></item>
         <item>PARTICULAR</item>
-        <item>DE ALUGUEL</item>
-        <item>DE APRENDIZAGEM</item>
-        <item>DE REPRESENTAÇÃO DIPLOMÁTICA</item>
-        <item>DE REPARTIÇÕES CONSULARES DE CARREIRA</item>
-        <item>DE ORGANISMOS INTERNACIONAIS ACREDITADOS JUNTO AO</item>
+        <item>ALUGUEL</item>
+        <item>OFICIAL</item>
+        <item>EXPERIÊNCIA</item>
+        <item>APRENDIZAGEM</item>
+        <item>REPRESENTAÇÃO DIPLOMÁTICA</item>
+        <item>REPARTIÇÕES CONSULARES DE CARREIRA</item>
+        <item>CORPO CONSULAR</item>
         <item>GOVERNO BRASILEIRO</item>
     </string-array>
-    <string-array name="autode_especie">
+
+    <string-array name="auto_especie">
+        <item></item>
         <item>PASSAGEIRO</item>
         <item>CARGA</item>
         <item>MISTO</item>
@@ -40,53 +113,71 @@
         <item>CRLV</item>
         <item>CNH</item>
         <item>PPD</item>
+        <item>ACC</item>
+    </string-array>
+    <string-array name="array_unidades">
+        <item>Km/h</item>
+        <item>m/s</item>
+        <item>Kg</item>
+        <item>Mg/L</item>
+        <item>Dg/L</item>
     </string-array>
     <string-array name="qtd_de">
-        <item>"0"</item>
-        <item>"1"</item>
-        <item>"2"</item>
-        <item>"3"</item>
-        <item>"4"</item>
-        <item>"5"</item>
-        <item>"6"</item>
-        <item>"7"</item>
-        <item>"8"</item>
-        <item>"9"</item>
-        <item>"10"</item>
-        <item>"15"</item>
-        <item>"20"</item>
-        <item>"25"</item>
-        <item>"30"</item>
+        <item>"1 (um)"</item>
+        <item>"2 (dois)"</item>
+        <item>"3 (três)"</item>
+        <item>"4 (quatro)"</item>
+        <item>"5 (cinco)"</item>
+        <item>"6 (seis)"</item>
+        <item>"7 (sete)"</item>
+        <item>"8 (oito)"</item>
+        <item>"9 (novo)"</item>
+        <item>"10 (dez)"</item>
+        <item>"15 (quinze)"</item>
+        <item>"20 (vinte)"</item>
+        <item>"25 (vinte e cinco)"</item>
+        <item>"30 (trinta)"</item>
     </string-array>
-    <string-array name="tca_uf_array">
-        <item>"PA"</item>
-        <item>"AC"</item>
-        <item>"AL"</item>
-        <item>"AM"</item>
-        <item>"AP"</item>
-        <item>"BA"</item>
-        <item>"CE"</item>
-        <item>"DF"</item>
-        <item>"ES"</item>
-        <item>"GO"</item>
-        <item>"MA"</item>
-        <item>"MG"</item>
-        <item>"MS"</item>
-        <item>"MT"</item>
-        <item>"PA"</item>
-        <item>"PB"</item>
-        <item>"PE"</item>
-        <item>"PI"</item>
-        <item>"PR"</item>
-        <item>"RJ"</item>
-        <item>"RN"</item>
-        <item>"RO"</item>
-        <item>"RR"</item>
-        <item>"RS"</item>
-        <item>"SC"</item>
-        <item>"SE"</item>
-        <item>"SP"</item>
-        <item>"TO"</item>
+
+    <string-array name="uf_array">
+        <item></item>
+        <item>PA</item>
+        <item>AC</item>
+        <item>AL</item>
+        <item>AM</item>
+        <item>AP</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MG</item>
+        <item>MS</item>
+        <item>MT</item>
+        <item>PB</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>PR</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>RS</item>
+        <item>SC</item>
+        <item>SE</item>
+        <item>SP</item>
+        <item>TO</item>
+    </string-array>
+
+    <!-- gager array -->
+    <string-array name="outro_documento">
+        <item>Identidade</item>
+        <item>CPF</item>
+        <item>Carteira de trabalho</item>
+        <item>Passaporte</item>
+        <item>OAB</item>
+        <item>Nenhum</item>
     </string-array>
 
     <!-- gager array -->
@@ -111,6 +202,7 @@
         <item>RG</item>
         <item></item>
     </string-array>
+
     <string-array name="filter_full_name">
         <item>Amongado</item>
         <item>Empenado</item>
@@ -383,61 +475,4 @@
         <item>Logout</item>
     </string-array>
 
-</resources><!--
- <string-array name="autode_descricao">
-        <item>ALTO SENSOR IV</item>
-        <item>ALCOOL LIMITED 343</item>
-        <item>BFD-60</item>
-        <item>PAQUIMETRO DIGITAL</item>
-        <item>PAQUIMETRO MANUAL</item>
-    </string-array>
-    <string-array name="autode_cpf">
-        <item>"0"</item>
-        <item>"1"</item>
-        <item>"2"</item>
-        <item>"3"</item>
-        <item>"4"</item>
-        <item>"5"</item>
-        <item>"6"</item>
-        <item>"7"</item>
-        <item>"8"</item>
-        <item>"9"</item>
-        <item>"10"</item>
-        <item>"11"</item>
-    </string-array>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--->
+</resources>

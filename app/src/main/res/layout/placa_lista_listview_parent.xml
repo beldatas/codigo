@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/log_plate"
-        android:layout_marginLeft="@dimen/log_margin_left"
+        android:layout_marginLeft="@dimen/widght_padding"
         android:text="Normal"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/log_gray" />

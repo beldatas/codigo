@@ -13,7 +13,7 @@
 
         <com.rey.material.widget.Button
             style="@style/Material.Drawable.Ripple.Wave"
-            android:id="@+id/ver_plate_nova_autos"
+            android:id="@+id/btn_plate_criar_novo_auto"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/widght_margin"
@@ -21,11 +21,11 @@
             android:background="@drawable/btn_green"
             android:padding="@dimen/widght_padding_2"
             android:text="Novo Auto"
-            android:textColor="@color/whight" />
+            android:textColor="@color/white" />
 
         <com.rey.material.widget.Button
             style="@style/Material.Drawable.Ripple.Wave"
-            android:id="@+id/ver_plate_auto"
+            android:id="@+id/btn_plate_criar_auto"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/widght_margin"
@@ -33,8 +33,22 @@
             android:background="@drawable/btn_lobster"
             android:padding="@dimen/widght_padding_2"
             android:text="@string/autuar"
-            android:textColor="@color/whight" />
+            android:textColor="@color/white" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/log_marca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/widght_padding"
+        android:text="Marca"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/indicator_height_1"
+        android:background="@color/line_color" />
 
     <TextView
         android:id="@+id/log_model"
@@ -70,6 +84,20 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/widght_padding"
         android:text="Type"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/indicator_height_1"
+        android:background="@color/line_color" />
+
+    <TextView
+        android:id="@+id/log_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/widght_padding"
+        android:text="Category"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/black" />
 

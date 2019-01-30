@@ -3,6 +3,6 @@
 
     <item android:drawable="@color/whight_p" android:state_pressed="true"></item>
     <item android:drawable="@color/disable" android:state_enabled="false"></item>
-    <item android:drawable="@color/whight"></item>
+    <item android:drawable="@color/white"></item>
 
 </selector>

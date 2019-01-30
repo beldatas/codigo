@@ -203,7 +203,7 @@ public class SnackBar extends Dialog{
 	 *
 	 */
 	public interface OnHideListener{
-		public void onHide();
+		void onHide();
 	}
 	
 	public void setOnhideListener(OnHideListener onHideListener){

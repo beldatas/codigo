@@ -57,8 +57,8 @@ public class Dialog extends android.app.Dialog{
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.dialog);
 	    
-		view = (RelativeLayout)findViewById(R.id.contentDialog);
-		backView = (RelativeLayout)findViewById(R.id.dialog_rootView);
+		view = findViewById(R.id.contentDialog);
+		backView = findViewById(R.id.dialog_rootView);
 		backView.setOnTouchListener(new OnTouchListener() {
 			
 			@Override

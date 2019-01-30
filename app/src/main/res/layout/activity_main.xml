@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/yellow"
+    android:background="@color/gray_5"
     android:paddingBottom="@dimen/layout_margin_buttom"
     android:paddingLeft="@dimen/layout_margin_left_right"
     android:paddingRight="@dimen/layout_margin_left_right"
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/layout_margin_top"
-            android:contentDescription="@string/nome_app"
+            android:contentDescription="@string/app_name"
             android:src="@drawable/ic_launcher" />
 
         <TextView
@@ -45,8 +45,8 @@
             android:layout_marginTop="@dimen/widght_margin"
             android:gravity="center"
             android:singleLine="true"
-            android:text="@string/nome_app"
-            android:textColor="@color/whight"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
             android:textSize="@dimen/title_fint_size" />
     </LinearLayout>
 </RelativeLayout>

@@ -21,7 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <net.sistransito.mobile.viewpager.AnySwipeableViewPager
+    <net.sistran.mobile.viewpager.AnySwipeableViewPager
         android:id="@+id/login_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
