@@ -50,7 +50,7 @@
     <color name="black">#000</color>
     <color name="red">#D85445</color>
     <color name="yellow">#fc8a00</color>
-    <color name="yellow_light">#d79118</color>
+    <color name="yellow_light">#df9d4a</color>
     <color name="yellow_deep">#ff9702</color>
     <color name="yellow_deep_2">#ef8e2f</color>
     <color name="yellow_gray">#fedcb2</color>
@@ -74,8 +74,8 @@
     <color name="blue_p">#39579b</color>
     <color name="green">#83bf12</color>
     <color name="green_p">#72ab00</color>
-    <color name="organge">#9f2e1e</color>
-    <color name="organge_p">#e66c33</color>
+    <color name="organge">#b9afa8</color>
+    <color name="organge_p">#746a66</color>
     <color name="lobster">#ff6267</color>
     <color name="lobster_p">#c94a4e</color>
     <color name="yellow_btn">#9f530b</color>

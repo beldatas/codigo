@@ -107,7 +107,7 @@
     <string name="email">Email</string>
     <string name="login_login"><b><i>Login</i></b></string>
     <string name="password">Senha</string>
-    <string name="login">"Logar"</string>
+    <string name="login">Logar</string>
     <string name="register">Cadastrar</string>
     <string name="forgetPassword">Lembrar senha?</string>
     <string name="name">Nome</string>
@@ -536,6 +536,7 @@
     <string name="listar_tca">TCA emitidos</string>
     <string name="listar_rrd">RRD emitidos</string>
     <string name="titulo_rrd_avulso">RRD Avulso</string>
+    <string name="auto_tracker">Tracker</string>
 
     <!-- other -->
     <string name="sincronizacao_concluida">Sincronização concluída.</string>

@@ -31,7 +31,7 @@ public class AutoInfracaoDatabaseAdapter {
 	public AutoInfracaoDatabaseAdapter(Context context) {
 		ime = new TimeAndIme(context);
 		databaseHelper = new AutoInfracaoDatabaseHelper(context);
-		//database = databaseHelper.getReadableDatabase(ime.getIME());
+		//database = databaseHelper.getReadableDatabase(ime.getImei());
 		database = databaseHelper.getReadableDatabase();
 		this.context = context;
 	}

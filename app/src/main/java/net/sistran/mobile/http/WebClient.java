@@ -1,6 +1,7 @@
 package net.sistran.mobile.http;
 
 import android.content.Context;
+import android.location.Location;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -54,7 +55,9 @@ public class WebClient {
         client.post(url, params, responseHandler);
     }
 
-    public static String getLoginUrl(String email, String password) {
-        return LOGIN_URl + email + "&senha=" + password;
+    public static String getLoginUrl(String email, String password, String imei,
+                                     String mobile, Location latitude, Location longitude) {
+        return LOGIN_URl + email + "&senha=" + password + "&imei=" + imei
+                + "&mobile=" + mobile + "&horizontal=" + latitude + "&vestical=" + longitude;
     }
 }

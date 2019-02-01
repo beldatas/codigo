@@ -13,8 +13,7 @@ import net.sistran.R;
 
 public class LogListFragment extends Fragment implements OnClickListener {
     private View view;
-    private Button btnListarPlacas, btnListarAutos, btnListarRrd,
-            btnListarTca, btnListarTav;
+    private Button btnListarPlacas, btnListarAutos, btnTracker;
 
     public static LogListFragment newInstance() {
         return new LogListFragment();
@@ -33,6 +32,8 @@ public class LogListFragment extends Fragment implements OnClickListener {
         btnListarPlacas.setOnClickListener(this);
         btnListarAutos = (Button) view.findViewById(R.id.btn_listar_autos);
         btnListarAutos.setOnClickListener(this);
+        btnTracker = (Button) view.findViewById(R.id.btn_tracker);
+        btnTracker.setOnClickListener(this);
     }
 
     @Override
@@ -43,6 +44,9 @@ public class LogListFragment extends Fragment implements OnClickListener {
                 break;
             case R.id.btn_listar_autos:
                 startActivity(AppObject.getAutoDeListerIntent(getActivity()));
+                break;
+            case R.id.btn_tracker:
+                startActivity(AppObject.getTrackerIntent(getActivity()));
                 break;
         }
     }

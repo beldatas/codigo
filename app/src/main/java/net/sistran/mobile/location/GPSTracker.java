@@ -1,16 +1,19 @@
 package net.sistran.mobile.location;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Service;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
 
 public class GPSTracker extends Service implements LocationListener {
 	private LocationManager locationManager;
@@ -26,7 +29,7 @@ public class GPSTracker extends Service implements LocationListener {
 		locationManager = (LocationManager) mContext.getSystemService(Context.LOCATION_SERVICE);
 		if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
 				|| locationManager
-						.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+				.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
 
 			Location gpsLocation = null;
 			Location networkLocation = null;
@@ -63,6 +66,14 @@ public class GPSTracker extends Service implements LocationListener {
 	}
 
 	public Location getLocation() {
+		return myLocation;
+	}
+
+	public Location getLatitude(){
+		return myLocation;
+	}
+
+	public Location getLongitude(){
 		return myLocation;
 	}
 
@@ -135,6 +146,9 @@ public class GPSTracker extends Service implements LocationListener {
 	private Location requestUpdateFromProvider(String provider) {
 		Location location = null;
 		if (locationManager.isProviderEnabled(provider)) {
+			if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+				return null;
+			}
 			locationManager.requestLocationUpdates(provider, 1, 10, this);
 			location = locationManager.getLastKnownLocation(provider);
 

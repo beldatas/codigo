@@ -17,7 +17,7 @@ public class SettingDatabaseAdapter {
 	public SettingDatabaseAdapter(Context context) {
 		databaseHelperSettting = new SetttingDatabaseHelper(context);
 		ime = new TimeAndIme(context);
-		//database = databaseHelperSettting.getWritableDatabase(ime.getIME());
+		//database = databaseHelperSettting.getWritableDatabase(ime.getImei());
 		database = databaseHelperSettting.getWritableDatabase();
 		checkTable();
 	}

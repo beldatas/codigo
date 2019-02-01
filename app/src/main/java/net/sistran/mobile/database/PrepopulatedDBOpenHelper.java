@@ -61,12 +61,12 @@ public class PrepopulatedDBOpenHelper extends SQLiteOpenHelper {
 		this.context = context;
 
 		/*super(context, Environment.getExternalStorageDirectory()
-				+ "/SistransitoMobile/data/"
+				+ "/SistranMobile/data/"
 				+ DB_NAME, null, 1);
 		this.context = context;
 
 		DB_PATH = Environment.getExternalStorageDirectory()
-				+ "/SistransitoMobile/data/";*/
+				+ "/SistranMobile/data/";*/
 
 		if(android.os.Build.VERSION.SDK_INT >= 4.2){
 			DB_PATH = context.getApplicationInfo().dataDir + "/databases/";

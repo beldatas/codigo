@@ -19,7 +19,7 @@ public class NumeroDatabaseAdapter {
 	public NumeroDatabaseAdapter(Context context) {
 		ime = new TimeAndIme(context);
 		databaseHelper = new NumeroDatabaseHelper(context);
-		//database = databaseHelper.getWritableDatabase(ime.getIME());
+		//database = databaseHelper.getWritableDatabase(ime.getImei());
 		database = databaseHelper.getWritableDatabase();
 	}
 

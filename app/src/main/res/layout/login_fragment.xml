@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow"
+    android:background="@color/gray_2"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
@@ -51,13 +51,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/widght_margin_top_2"
         android:layout_marginTop="@dimen/widght_margin_top_2"
-        android:background="@drawable/btn_whight"
-        android:drawableLeft="@drawable/signup_name_2"
+        android:background="@drawable/btn_green"
+        android:drawableLeft="@drawable/signup_name"
         android:drawablePadding="@dimen/widght_padding"
         android:gravity="left|center_vertical"
         android:paddingLeft="@dimen/widght_padding"
         android:text="@string/login"
-        android:textColor="@color/pink" />
+        android:textColor="@color/white" />
 
 
     <LinearLayout

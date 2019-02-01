@@ -18,7 +18,7 @@ public class PlacaSearchDatabaseAdapter {
 	public PlacaSearchDatabaseAdapter(Context context) {
 		ime = new TimeAndIme(context);
 		placaSearchDatabaseHelper = new PlacaSearchDatabaseHelper(context);
-		//database = placaSearchDatabaseHelper.getWritableDatabase(ime.getIME());
+		//database = placaSearchDatabaseHelper.getWritableDatabase(ime.getImei());
 		database = placaSearchDatabaseHelper.getWritableDatabase();
 	}
 

@@ -16,14 +16,17 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
-        android:name="net.sistran.SistranApplication"
+        android:name=".SistranApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/MaterialTheme">
         <activity
-            android:name="net.sistran.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,10 +35,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="net.sistran.mobile.login.LoginActivity"
-            android:theme="@style/MaterialTheme"></activity>
-        <activity android:name="net.sistran.mobile.placa.lister.PlacaLister"></activity>
-        <activity android:name="net.sistran.mobile.placa.lister.PlacaListerDelete"></activity>
+            android:name=".mobile.login.LoginActivity"
+            android:theme="@style/MaterialTheme" />
+        <activity android:name=".mobile.placa.lister.PlacaLister" />
+        <activity android:name=".mobile.placa.lister.PlacaListerDelete" />
 
         <!--
         receiver android:name="net.sistransito.mobile.SampleAlarmReceiver" >
@@ -52,37 +55,38 @@
         <service android:name="net.sistransito.mobile.SampleSchedulingService" />
         -->
 
-        <receiver android:name="net.sistran.mobile.main.BalancoAlarmReceiver"></receiver>
+        <receiver android:name=".mobile.main.BalancoAlarmReceiver" />
         <receiver
-            android:name="net.sistran.mobile.main.BalancoBootReceiver"
+            android:name=".mobile.main.BalancoBootReceiver"
             android:enabled="false">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
-        <service android:name="net.sistran.mobile.main.BalancoSchedulingService"></service>
+        <service android:name=".mobile.main.BalancoSchedulingService" />
 
         <activity
-            android:name="net.sistran.mobile.main.MainUserActivity"
-            android:theme="@style/MaterialTheme"></activity>
+            android:name=".mobile.main.MainUserActivity"
+            android:theme="@style/MaterialTheme" />
         <activity
-            android:name="net.sistran.mobile.autoinfracao.AutoActivity"
-            android:theme="@style/MaterialTheme"></activity>
-        <activity android:name="net.sistran.mobile.autoinfracao.lister.AutoLister"></activity>
+            android:name=".mobile.autoinfracao.AutoActivity"
+            android:theme="@style/MaterialTheme" />
+        <activity android:name=".mobile.autoinfracao.lister.AutoLister" />
         <activity
-            android:name="net.sistran.mobile.tav.TAVActivity"
-            android:theme="@style/MaterialTheme"></activity>
-        <activity android:name="net.sistran.mobile.tav.lister.TAVLister"></activity>
+            android:name=".mobile.tav.TAVActivity"
+            android:theme="@style/MaterialTheme" />
+        <activity android:name=".mobile.tav.lister.TAVLister" />
         <activity
-            android:name="net.sistran.mobile.tca.TCAActivity"
-            android:theme="@style/MaterialTheme"></activity>
-        <activity android:name="net.sistran.mobile.tca.lister.TCALister"></activity>
+            android:name=".mobile.tca.TCAActivity"
+            android:theme="@style/MaterialTheme" />
+        <activity android:name=".mobile.tca.lister.TCALister" />
         <activity
-            android:name="net.sistran.mobile.rrd.RRDActivity"
-            android:theme="@style/MaterialTheme"></activity>
-        <activity android:name="net.sistran.mobile.rrd.lister.RRDLister"></activity>
-        <activity android:name="net.sistran.mobile.database.sync.SyncFiles"></activity>
+            android:name=".mobile.rrd.RRDActivity"
+            android:theme="@style/MaterialTheme" />
+        <activity android:name=".mobile.rrd.lister.RRDLister" />
+        <activity android:name=".mobile.database.sync.SyncFiles" />
+        <activity android:name=".mobile.location.TrackerActivity"></activity>
     </application>
 
 </manifest>

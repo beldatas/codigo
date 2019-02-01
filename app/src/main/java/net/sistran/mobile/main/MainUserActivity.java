@@ -49,6 +49,7 @@ import net.sistran.mobile.database.DatabaseCreator;
 import net.sistran.mobile.database.sync.ImageFragment;
 import net.sistran.mobile.equipamentos.AutoEquipmentEntryJsonTask;
 import net.sistran.mobile.http.WebClient;
+import net.sistran.mobile.location.TrackerActivity;
 import net.sistran.mobile.numero.CheckNumeros;
 import net.sistran.mobile.placa.consulta.ConsultPlateFragment;
 import net.sistran.mobile.placa.lister.LogListFragment;

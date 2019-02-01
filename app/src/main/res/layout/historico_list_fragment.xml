@@ -41,4 +41,20 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/white" />
 
+    <com.rey.material.widget.Button
+        style="@style/Material.Drawable.Ripple.Wave"
+        android:id="@+id/btn_tracker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/widght_margin_top"
+        android:layout_marginTop="@dimen/widght_margin_top"
+        android:background="@drawable/btn_organge"
+        android:drawableLeft="@drawable/ic_lister_autos"
+        android:drawablePadding="@dimen/widght_padding"
+        android:gravity="left|center_vertical"
+        android:padding="@dimen/widght_padding"
+        android:text="@string/auto_tracker"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
 </LinearLayout>

@@ -1,9 +1,10 @@
 package net.sistran.mobile.login;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -11,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -22,12 +22,15 @@ import com.rey.material.widget.TextView;
 
 import net.sistran.mobile.appconstantes.AppConstants;
 import net.sistran.mobile.appobjeto.AppObject;
+import net.sistran.mobile.autoinfracao.Utility;
 import net.sistran.mobile.fragment.AnyPageChangeListener;
 import net.sistran.mobile.http.WebClient;
+import net.sistran.mobile.location.GPSTracker;
 import net.sistran.mobile.main.MainUserActivity;
 import net.sistran.mobile.network.NetworkConnection;
 import net.sistran.mobile.timeandime.TimeAndIme;
 import net.sistran.mobile.util.DialogMaterial;
+import net.sistran.mobile.util.Rotinas;
 import net.sistran.mobile.util.User;
 import net.sistran.R;
 
@@ -41,9 +44,9 @@ public class FragmentLogin extends Fragment implements OnClickListener {
     private TextView btnRegister;
     private Button btnLogin;
     private EditText etEmail, etPassword;
-    private InputMethodManager imm;
     private ProgressDialog pd;
-    private TimeAndIme ime;
+    private TimeAndIme imei;
+    private GPSTracker gps;
 
     @Override
     public void onAttach(Activity activity) {
@@ -55,14 +58,14 @@ public class FragmentLogin extends Fragment implements OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.login_fragment, null, false);
-        imm = (InputMethodManager) getActivity().getSystemService(
-                Context.INPUT_METHOD_SERVICE);
         initializedView();
         return view;
     }
 
     private void initializedView() {
-        ime = new TimeAndIme(getActivity());
+        imei = new TimeAndIme(getActivity());
+        gps = new GPSTracker(getActivity());
+
         btnLogin = (Button) view.findViewById(R.id.btn_login);
         btnLogin.setOnClickListener(this);
         etEmail = (EditText) view.findViewById(R.id.et_email);
@@ -76,7 +79,8 @@ public class FragmentLogin extends Fragment implements OnClickListener {
             case R.id.btn_login:
                 if (checkInput()) {
                     if (NetworkConnection.isNetworkAvailable(getActivity())) {
-                        imm.hideSoftInputFromWindow(btnLogin.getWindowToken(), 0);
+                        //imm.hideSoftInputFromWindow(btnLogin.getWindowToken(), 0);
+                        Rotinas.closeKeyboard(btnLogin,getActivity());
                         userLogin();
                     } else {
                         DialogMaterial.getBottomSheet(getResources().getString(R.string.sem_conexao), Color.RED, getActivity()).show();
@@ -105,7 +109,14 @@ public class FragmentLogin extends Fragment implements OnClickListener {
     private void userLogin() {
         String email = etEmail.getText().toString();
         String password = etPassword.getText().toString();
-        String url = WebClient.getLoginUrl(email, password);
+        String imei = this.imei.getIMEI(getActivity());
+        String mobile = this.imei.getPhoneNumber(getActivity());
+        Location latitude = this.gps.getLatitude();
+        Location longitude = this.gps.getLongitude();
+        String uniqueID = this.imei.getDeviceUniqueID(getActivity());
+        String url = WebClient.getLoginUrl(email, password, imei, mobile, latitude, longitude);
+
+        Log.d("Imei: ", imei + " Telefone: " + mobile + " UniqueID: " + uniqueID + " Location: " + latitude + "," + longitude);
 
         WebClient.get(url, null, new AsyncHttpResponseHandler() {
             @Override
@@ -131,7 +142,7 @@ public class FragmentLogin extends Fragment implements OnClickListener {
                     AppObject.getTinyDB(getActivity()).putObject(AppConstants.user, user);
                     getActivity().startActivity(new Intent(getActivity(), MainUserActivity.class));
                     getActivity().finish();
-                    Log.d("Imei", ime.getIME());
+                    //Log.d("Imei", FragmentLogin.this.imei.getImei());
                 } else {
                     showLoginFailMgs();
                 }

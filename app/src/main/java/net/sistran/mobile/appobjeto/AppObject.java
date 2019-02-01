@@ -15,6 +15,7 @@ import net.sistran.mobile.autoinfracao.lister.AutoLister;
 import net.sistran.mobile.database.DatabaseCreator;
 import net.sistran.mobile.database.TinyDB;
 import net.sistran.mobile.http.CustomHttpClient;
+import net.sistran.mobile.location.TrackerActivity;
 import net.sistran.mobile.placa.lister.PlacaLister;
 
 import net.sistran.R;
@@ -40,7 +41,13 @@ public class AppObject {
         return autoListerIntent;
     }
 
-    private static Intent placaListIntent, autoListerIntent;
+    public static Intent getTrackerIntent(Context context){
+        if (trackerIntent == null)
+            trackerIntent = new Intent(context, TrackerActivity.class);
+        return trackerIntent;
+    }
+
+    private static Intent placaListIntent, autoListerIntent, trackerIntent;
 
 
     public static TinyDB getTinyDB(Context c) {
@@ -62,6 +69,7 @@ public class AppObject {
 
         placaListIntent = new Intent(SistranApplication.getAppContext(), PlacaLister.class);
         autoListerIntent = new Intent(SistranApplication.getAppContext(), AutoLister.class);
+        trackerIntent = new Intent(SistranApplication.getAppContext(), TrackerActivity.class);
     }
 
     public static Typeface getTf_normal(Context context) {

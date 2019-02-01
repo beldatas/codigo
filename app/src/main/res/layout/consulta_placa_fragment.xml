@@ -128,7 +128,7 @@
                 style="@style/Material.Drawable.Ripple.Wave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_organge"
+                android:background="@drawable/btn_green"
                 android:drawableStart="@drawable/ic_send"
                 android:drawablePadding="@dimen/widght_padding"
                 android:gravity="left|center_vertical"

@@ -124,7 +124,7 @@ public class FragmentRegister extends Fragment implements
         password = etPassword.getText().toString();
 
         String url = WebClient.URL_CLOGIN
-                + "&imei=" + ime.getIME() + "&orgao=" + orgao + "&nome=" + name
+                + "&imei=" + ime.getImei() + "&orgao=" + orgao + "&nome=" + name
                 + "&mat=" + matricula + "&cpf=" + cpf + "&login=" + login
                 + "&senha=" + password;
 
